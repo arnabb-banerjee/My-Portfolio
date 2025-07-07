@@ -26,42 +26,53 @@ window.addEventListener('DOMContentLoaded', event => {
 });
 
 document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
+  e.preventDefault();
 
-    const rawName = document.getElementById('name').value.trim();
-    const rawNumber = document.getElementById('number').value.trim();
-    const rawEmail = document.getElementById('email').value.trim();
-    const rawPurpose = document.getElementById('purpose').value;
-    const rawMessage = document.getElementById('message').value.trim();
+  const rawName = document.getElementById('name').value.trim();
+  const rawNumber = document.getElementById('number').value.trim();
+  const rawEmail = document.getElementById('email').value.trim();
+  const rawPurpose = document.getElementById('purpose').value;
+  const rawMessage = document.getElementById('message').value.trim();
 
-    if (!rawName || !rawNumber || !rawEmail || !rawPurpose || !rawMessage) {
-      alert('⚠️ Please fill in all fields before submitting.');
-      return;
-    }
+  if (!rawName || !rawNumber || !rawEmail || !rawPurpose || !rawMessage) {
+    alert('⚠️ Please fill in all fields before submitting.');
+    return;
+  }
 
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(rawEmail)) {
-      alert('❌ Please enter a valid email address.');
-      return;
-    }
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(rawEmail)) {
+    alert('❌ Please enter a valid email address.');
+    return;
+  }
 
-    const name = encodeURIComponent(rawName);
-    const number = encodeURIComponent(rawNumber);
-    const email = encodeURIComponent(rawEmail);
-    const purpose = encodeURIComponent(rawPurpose);
-    const message = encodeURIComponent(rawMessage);
+  // Prepare message content
+  const name = rawName;
+  const number = rawNumber;
+  const email = rawEmail;
+  const purpose = rawPurpose;
+  const message = rawMessage;
 
-    const fullMessage = `New Contact Request:%0A%0AName: ${name}%0AContact Number: ${number}%0AEmail: ${email}%0APurpose: ${purpose}%0AMessage: ${message}`;
-    const whatsappUrl = `https://wa.me/919874360607?text=${fullMessage}`;
+  const fullMessage = `New Contact Request:\n\nName: ${name}\nContact Number: ${number}\nEmail: ${email}\nPurpose: ${purpose}\nMessage: ${message}`;
 
-    alert('✅ Your message is being sent to WhatsApp.');
+  // Encode for WhatsApp URL
+  const encodedMessage = encodeURIComponent(fullMessage);
+  const whatsappUrl = `https://wa.me/919874360607?text=${encodedMessage}`;
 
-    setTimeout(() => {
-      window.open(whatsappUrl, '_blank');
-    }, 300);
+  // Encode for mailto
+  const mailtoSubject = encodeURIComponent(`Contact Form Submission: ${purpose}`);
+  const mailtoBody = encodeURIComponent(fullMessage);
+  const mailtoUrl = `mailto:arnab.banerjee.indra@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
 
-    this.reset();
-  });
+  alert('✅ Your message is being sent to WhatsApp and Email.');
+
+  // Open WhatsApp and Email client in new tabs/windows
+  setTimeout(() => {
+    window.open(whatsappUrl, '_blank');
+    window.open(mailtoUrl, '_blank');
+  }, 300);
+
+  this.reset();
+});
 
 // Toggle Details Section
 function toggleDetails(id) {
