@@ -59,6 +59,7 @@
             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Movies</a></li>
             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Recognition</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
         </ul>
     </div>
 </nav>
@@ -226,6 +227,34 @@
             </ul>
         </div>
     </section>
+
+    <!-- Contact Form -->
+    <section class="contact-section" id="contact">
+        <div class="mt-5 bg-white p-4 rounded shadow-sm">
+            <h2 class="mb-5">Contact me</h2>
+            <form id="contactForm">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Your name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="number" class="form-label">Contact Number</label>
+                    <input type="tel" class="form-control" id="number" placeholder="Your phone number" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message / Description</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="How can I help you?" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-success"><i class="fab fa-whatsapp me-2"></i>Send via WhatsApp</button>
+            </form>
+        </div>
+    </section>
+    
+
 </div>
 
 <!-- Bootstrap core JS -->
