@@ -33,20 +33,56 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
+
 document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
-    const name = encodeURIComponent(document.getElementById('name').value.trim());
-    const number = encodeURIComponent(document.getElementById('number').value.trim());
-    const email = encodeURIComponent(document.getElementById('email').value.trim());
-    const purpose = encodeURIComponent(document.getElementById('purpose').value);
-    const message = encodeURIComponent(document.getElementById('message').value.trim());
+    // Get raw values
+    const rawName = document.getElementById('name').value.trim();
+    const rawNumber = document.getElementById('number').value.trim();
+    const rawEmail = document.getElementById('email').value.trim();
+    const rawPurpose = document.getElementById('purpose').value;
+    const rawMessage = document.getElementById('message').value.trim();
+
+    // Validate fields
+    if (!rawName || !rawNumber || !rawEmail || !rawPurpose || !rawMessage) {
+        alert('⚠️ Please fill in all fields before submitting.');
+        return;
+    }
+
+    // Optional: Simple email format check
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(rawEmail)) {
+        alert('❌ Please enter a valid email address.');
+        return;
+    }
+
+    // Encode values
+    const name = encodeURIComponent(rawName);
+    const number = encodeURIComponent(rawNumber);
+    const email = encodeURIComponent(rawEmail);
+    const purpose = encodeURIComponent(rawPurpose);
+    const message = encodeURIComponent(rawMessage);
 
     const fullMessage = `New Contact Request:%0A%0AName: ${name}%0AContact Number: ${number}%0AEmail: ${email}%0APurpose: ${purpose}%0AMessage: ${message}`;
     const whatsappUrl = `https://wa.me/919874360607?text=${fullMessage}`;
 
-    window.open(whatsappUrl, '_blank');
+    // Scroll to top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Show success alert
+    alert('✅ Your message is being sent to WhatsApp.');
+
+    // Open WhatsApp after slight delay
+    setTimeout(() => {
+        window.open(whatsappUrl, '_blank');
+    }, 300);
+
+    // Optional: Clear the form after submission
+    document.getElementById('contactForm').reset();
 });
+
+
 
 function toggleDetails(id) {
     const detail = document.getElementById(id);
