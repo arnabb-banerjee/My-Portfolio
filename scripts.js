@@ -32,11 +32,11 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     const rawName = document.getElementById('name').value.trim();
     const rawNumber = document.getElementById('number').value.trim();
     const rawEmail = document.getElementById('email').value.trim();
-    const rawPurpose = document.getElementById('purpose').value;
+    const rawPurpose = document.getElementById('purpose') ? document.getElementById('purpose').value : 'General Inquiry';
     const rawMessage = document.getElementById('message').value.trim();
 
     // Validate required fields
-    if (!rawName || !rawNumber || !rawEmail || !rawPurpose || !rawMessage) {
+    if (!rawName || !rawNumber || !rawEmail || !rawMessage) {
         alert('⚠️ Please fill in all fields before submitting.');
         return;
     }
@@ -50,50 +50,33 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     // Compose subject and body
     const subject = `Contact Request: ${rawPurpose}`;
     const body = `Name: ${rawName}\nContact Number: ${rawNumber}\nEmail: ${rawEmail}\nPurpose: ${rawPurpose}\nMessage: ${rawMessage}`;
+    const encodedBody = encodeURIComponent(body);
+    const encodedSubject = encodeURIComponent(subject);
 
-    // GMAIL LINK
-    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=arnab.banerjee.indra@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    // Email links
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=arnab.banerjee.indra@gmail.com&su=${encodedSubject}&body=${encodedBody}`;
+    const outlookUrl = `https://outlook.office.com/mail/deeplink/compose?to=arnab.banerjee.indra@gmail.com&subject=${encodedSubject}&body=${encodedBody}`;
 
-    // OUTLOOK LINK (optional alternative)
-    const outlookUrl = `https://outlook.office.com/mail/deeplink/compose?to=arnab.banerjee.indra@gmail.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    // WhatsApp message
+    const whatsappText = `New Contact Request:%0A%0AName: ${encodeURIComponent(rawName)}%0AContact Number: ${encodeURIComponent(rawNumber)}%0AEmail: ${encodeURIComponent(rawEmail)}%0APurpose: ${encodeURIComponent(rawPurpose)}%0AMessage: ${encodeURIComponent(rawMessage)}`;
+    const whatsappUrl = `https://wa.me/919874360607?text=${whatsappText}`;
 
-    // Ask user which platform to open
-    const emailChoice = confirm('📧 Do you want to send the message using Gmail?\n(Click "Cancel" to use Outlook instead)');
+    // Try opening all links
+    const gmailOpened = window.open(gmailUrl, '_blank');
+    const outlookOpened = window.open(outlookUrl, '_blank');
+    const whatsappOpened = window.open(whatsappUrl, '_blank');
 
-    let emailWindow = null;
-    if (emailChoice) {
-        emailWindow = window.open(gmailUrl, '_blank');
+    // Notify user
+    if (!gmailOpened || !outlookOpened || !whatsappOpened) {
+        alert('⚠️ Pop-ups might be blocked! Please allow pop-ups in your browser settings.');
     } else {
-        emailWindow = window.open(outlookUrl, '_blank');
-    }
-
-    if (!emailWindow) {
-        alert('❌ Pop-up blocked! Please allow pop-ups to send email.');
-        return;
-    }
-
-    alert('✅ Your email window has opened. Please complete and send your email.');
-
-    // Prompt for WhatsApp follow-up
-    const sendWhatsApp = confirm('📱 Would you like to also send this message via WhatsApp for faster response?');
-
-    if (sendWhatsApp) {
-        const whatsappText = `New Contact Request:%0A%0AName: ${encodeURIComponent(rawName)}%0AContact Number: ${encodeURIComponent(rawNumber)}%0AEmail: ${encodeURIComponent(rawEmail)}%0APurpose: ${encodeURIComponent(rawPurpose)}%0AMessage: ${encodeURIComponent(rawMessage)}`;
-        const whatsappUrl = `https://wa.me/919874360607?text=${whatsappText}`;
-
-        const whatsappWindow = window.open(whatsappUrl, '_blank');
-        if (!whatsappWindow) {
-            alert('❌ Pop-up blocked for WhatsApp! Please allow pop-ups.');
-        } else {
-            alert('✅ WhatsApp window opened. Please send your message.');
-        }
-    } else {
-        alert('ℹ️ WhatsApp sending skipped.');
+        alert('✅ Gmail, Outlook, and WhatsApp windows opened. You can send your message through any of them.');
     }
 
     // Clear the form
     this.reset();
 });
+
 
 
 // Toggle Details Section
