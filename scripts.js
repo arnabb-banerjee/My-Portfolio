@@ -25,58 +25,43 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 });
 
-// Contact Form Submission
-document.addEventListener('DOMContentLoaded', () => {
-    const contactForm = document.getElementById('contactForm');
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
 
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
+    const rawName = document.getElementById('name').value.trim();
+    const rawNumber = document.getElementById('number').value.trim();
+    const rawEmail = document.getElementById('email').value.trim();
+    const rawPurpose = document.getElementById('purpose').value;
+    const rawMessage = document.getElementById('message').value.trim();
 
-            const rawName = document.getElementById('name').value.trim();
-            const rawNumber = document.getElementById('number').value.trim();
-            const rawEmail = document.getElementById('email').value.trim();
-            const rawPurpose = document.getElementById('purpose').value;
-            const rawMessage = document.getElementById('message').value.trim();
-
-            // Validate fields
-            if (!rawName || !rawNumber || !rawEmail || !rawPurpose || !rawMessage) {
-                alert('⚠️ Please fill in all fields before submitting.');
-                return;
-            }
-
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailPattern.test(rawEmail)) {
-                alert('❌ Please enter a valid email address.');
-                return;
-            }
-
-            // Encode values
-            const name = encodeURIComponent(rawName);
-            const number = encodeURIComponent(rawNumber);
-            const email = encodeURIComponent(rawEmail);
-            const purpose = encodeURIComponent(rawPurpose);
-            const message = encodeURIComponent(rawMessage);
-
-            const fullMessage = `New Contact Request:%0A%0AName: ${name}%0AContact Number: ${number}%0AEmail: ${email}%0APurpose: ${purpose}%0AMessage: ${message}`;
-            const whatsappUrl = `https://wa.me/919874360607?text=${fullMessage}`;
-
-            // Scroll to top
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-
-            // Show alert
-            alert('✅ Your message is being sent to WhatsApp.');
-
-            // Open WhatsApp
-            setTimeout(() => {
-                window.open(whatsappUrl, '_blank');
-            }, 300);
-
-            // Clear form
-            contactForm.reset();
-        });
+    if (!rawName || !rawNumber || !rawEmail || !rawPurpose || !rawMessage) {
+      alert('⚠️ Please fill in all fields before submitting.');
+      return;
     }
-});
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(rawEmail)) {
+      alert('❌ Please enter a valid email address.');
+      return;
+    }
+
+    const name = encodeURIComponent(rawName);
+    const number = encodeURIComponent(rawNumber);
+    const email = encodeURIComponent(rawEmail);
+    const purpose = encodeURIComponent(rawPurpose);
+    const message = encodeURIComponent(rawMessage);
+
+    const fullMessage = `New Contact Request:%0A%0AName: ${name}%0AContact Number: ${number}%0AEmail: ${email}%0APurpose: ${purpose}%0AMessage: ${message}`;
+    const whatsappUrl = `https://wa.me/919874360607?text=${fullMessage}`;
+
+    alert('✅ Your message is being sent to WhatsApp.');
+
+    setTimeout(() => {
+      window.open(whatsappUrl, '_blank');
+    }, 300);
+
+    this.reset();
+  });
 
 // Toggle Details Section
 function toggleDetails(id) {
