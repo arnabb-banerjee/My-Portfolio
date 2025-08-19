@@ -11049,6 +11049,9 @@ section.resume-section .resume-section-content {
   background: url('images/cover-playbacksiger-arnabbanerjeeindra.png') center center / cover no-repeat;
   width: 100%;
   height: 100%;
+  background-size: cover;       /* ensures full coverage */
+  background-position: center;  /* keeps it centered */
+  background-repeat: no-repeat; /* stops tiling */
 }
 
 /* Profile Wrapper */
