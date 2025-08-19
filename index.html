@@ -650,8 +650,8 @@
                     classical foundation, and versatile style, Arnab bridges tradition with innovation in every
                     performance.
                     With <strong>45+ official releases</strong> across <em>Spotify</em>, <em>Amazon Music</em>,
-                    <em>Apple Music</em>,
-                    <em>JioSaavn</em>, and YouTube, his music resonates with both mainstream and indie audiences
+                    <em>Apple Music</em>, <em>JioSaavn</em>, and YouTube, his music resonates with both mainstream and
+                    indie audiences
                     worldwide.
                 </p>
 
@@ -686,6 +686,14 @@
                     Every track reflects his commitment to growth, storytelling, and emotional honesty.
                 </p>
 
+                <!-- Embedded Video Section (Centered) -->
+                <div class="video-wrapper my-5">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+                            title="Arnab Banerjee Official Music Video" allowfullscreen></iframe>
+                    </div>
+                </div>
+
                 <!-- Social Links -->
                 <div class="social-icons d-flex justify-content-center flex-wrap gap-4 mt-5">
                     <a class="social-icon fs-4 text-primary" href="https://www.linkedin.com/in/arnab-banerjee-indra"
@@ -717,6 +725,24 @@
             .social-icons a:hover {
                 transform: scale(1.2);
                 color: #0d6efd !important;
+            }
+
+            /* Video Styling */
+            .video-wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .video-wrapper .ratio {
+                max-width: 800px;
+                /* keep video centered and not too wide */
+                width: 100%;
+            }
+
+            .video-wrapper iframe {
+                border-radius: 12px;
+                /* cinematic rounded corners */
             }
         </style>
 
