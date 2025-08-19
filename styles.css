@@ -11036,4 +11036,51 @@ section.resume-section .resume-section-content {
     opacity: 0.8;
 }
 
+/* Home Section */
+.home-section {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+}
+
+/* Cover Image */
+.cover-photo {
+  background: url('your-cover-image.jpg') center center / cover no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+/* Profile Wrapper */
+.profile-wrapper {
+  position: absolute;
+  bottom: -90px; /* overlap effect */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+/* Profile Picture */
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Name + Tagline */
+.name {
+  margin-top: 15px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.name span {
+  color: #ffb400; /* highlight color */
+}
+.tagline {
+  font-size: 1.1rem;
+  color: #555;
+}
 
