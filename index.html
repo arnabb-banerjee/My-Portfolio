@@ -594,7 +594,60 @@
         </script>
     </section>
 
+    <hr class="m-0" />
 
+    <section class="contact-section" id="contact">
+        <div class="mt-5 bg-white p-4 rounded shadow-sm">
+            <h2 class="mb-5">Contact me</h2>
+
+            <div class="contact-box bg-white p-4 rounded shadow-sm mb-4">
+            <p class="mb-1"><strong>Location:</strong> Kolkata, West Bengal, 700129</p>
+            <p class="mb-1"><strong>Phone:</strong> +91 90734 64554</p>
+            <p class="mb-1"><strong>Email:</strong> <a href="mailto:contact@indravoice.com">contact@indravoice.com</a></p>
+            </div>
+
+            <form id="contactForm">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Your name" required />
+                </div>
+                <div class="mb-3">
+                    <label for="number" class="form-label">Contact Number</label>
+                    <input type="tel" class="form-control" id="number" placeholder="Your phone number" required />
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" placeholder="you@example.com" required />
+                </div>
+                <div class="mb-3">
+                    <label for="purpose" class="form-label">Purpose</label>
+                    <select class="form-select" id="purpose" required>
+                    <option value="" disabled selected>Select purpose</option>
+                    <option value="Book for Event/Concert">Book for Event/Concert</option>
+                    <option value="Collaboration Request">Collaboration Request</option>
+                    <option value="Songwriting Inquiry">Songwriting Inquiry</option>
+                    <option value="Voice Coaching/Training">Voice Coaching/Training</option>
+                    <option value="Media/Interview Request">Media/Interview Request</option>
+                    <option value="Fan Message/Appreciation">Fan Message/Appreciation</option>
+                    <option value="Sponsorship/Brand Partnership">Sponsorship/Brand Partnership</option>
+                    <option value="Music Licensing/Sync Request">Music Licensing/Sync Request</option>
+                    <option value="General Inquiry">General Inquiry</option>
+                    <option value="Project Quote">Project Quote</option>
+                    <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message / Description</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="How can I help you?" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-success">
+                    <i class="fab fa-whatsapp me-2"></i>
+                    <i class="fas fa-envelope me-2"></i>
+                    Send via WhatsApp & Email
+                </button>
+            </form>
+        </div>
+    </section>
     
 
 </div>
