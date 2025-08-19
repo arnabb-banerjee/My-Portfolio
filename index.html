@@ -57,11 +57,12 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Home</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#movies">Movies</a></li>
             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#songs">Songs</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#recognition">Recognition</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Movies</a></li>
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Recognition</a></li>
             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
         </ul>
     </div>
@@ -69,47 +70,94 @@
 
 <!-- Page Content -->
 <div class="container-fluid p-0">
-    <!-- About -->
-    <section class="resume-section bg-light" id="about" style="padding-top: 60px;">
+    <!-- Home Section -->
+    <section class="resume-section hero d-flex align-items-center justify-content-center text-center text-white" id="home" 
+            style="min-height: 100vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                    url('your-cover-image.jpg') center/cover no-repeat;">
         <div class="resume-section-content">
-            <h1 class="mb-3 display-4 fw-bold text-dark">Arnab <span class="text-primary">Banerjee</span></h1>
-            <p class="text-muted mb-4">Playback Singer · Composer · Indie Artist</p>
 
-            <div class="contact-box bg-white p-4 rounded shadow-sm mb-4">
-            <p class="mb-1"><strong>Location:</strong> Kolkata, West Bengal, 700129</p>
-            <p class="mb-1"><strong>Phone:</strong> +91 90734 64554</p>
-            <p class="mb-1"><strong>Email:</strong> <a href="mailto:contact@indravoice.com">contact@indravoice.com</a></p>
+            <!-- Profile Picture -->
+            <div class="mb-4">
+            <img src="images/arnab-banerjee-profile.png" alt="Arnab Banerjee Profile Picture" 
+                class="rounded-circle shadow border border-4 border-white"
+                style="width: 180px; height: 180px; object-fit: cover;">
             </div>
 
-            <p class="lead text-justify">
-            Arnab Banerjee, widely known by his artistic name <strong>Indra</strong>, is a passionate Indian playback singer, independent music composer, and rising voice in the Bengali music industry. His sound is defined by soulful expression, nuanced classical training, and a bold willingness to experiment with genres. With over 45 officially released tracks on platforms such as <strong>Spotify, Amazon Music, Apple Music, JioSaavn</strong>, and YouTube, Arnab has carved out a unique space that bridges heritage and innovation.
+            <!-- Name & Title -->
+            <h1 class="display-3 fw-bold">Arnab <span class="text-warning">Banerjee</span></h1>
+            <p class="lead mb-4">Playback Singer · Composer · Indie Artist</p>
+
+            <!-- SEO Description -->
+            <p class="mb-4 text-light px-3">
+            Welcome to the official website of <strong>Arnab Banerjee</strong> (Indra), a 
+            <strong>Bengali playback singer</strong>, <strong>independent composer</strong>, and 
+            <strong>indie artist</strong> from Kolkata. Known for soulful expression and versatility, 
+            Arnab’s songs are featured in Bengali films and available on 
+            <strong>Spotify, YouTube, Apple Music, and JioSaavn</strong>.
             </p>
 
-            <p class="lead text-justify">
-            Born and raised in Kolkata, Arnab's musical journey began early under the tutelage of renowned gurus in Hindustani classical music. His dedication to voice culture and raga-based training laid a solid foundation that reflects in every performance. However, Arnab has never limited himself to traditionalism. He ventured into playback singing for Bengali feature films like <strong>Pora Baanshi</strong>, <strong>Ami Rabindranath 2</strong>, and <strong>Panta Bhaater Biriyani</strong>, delivering melodies that stay with listeners long after the credits roll.
-            </p>
-
-            <p class="lead text-justify">
-            As an independent artist, Arnab is celebrated for his expressive vocal style that resonates with both mainstream and indie audiences. His voice carries a rare emotive depth — blending the sensitivity of ghazals, the structure of classical music, and the vibrancy of modern pop-folk fusion. From soulful ballads to energetic contemporary tracks, his singing adds authenticity and emotional weight to each composition. Songs like <em>Ei Shohor</em> and <em>Swapna Puraner Deshe</em> showcase his vocal range and musical adaptability, and have been featured across major streaming platforms including Spotify and JioSaavn.
-            </p>
-
-            <p class="lead text-justify">
-            Arnab’s music journey is steadily evolving, powered by his own commitment to growth and genuine love for music. While he has not yet performed on national television or been officially ranked by radio broadcasters, his tracks have organically reached thousands of listeners across digital platforms. With over 45 original releases available globally, he continues to build a loyal audience drawn to the authenticity of his voice and lyrical content. Arnab's artistic focus is clear: to create emotionally resonant music that blends heritage, heart, and innovation.
-            </p>
-
-            <p class="lead text-justify mb-5">
-            Beyond his musical achievements, Arnab is known for his humility, poetic writing, and deep respect for Bengali language and literature. Whether performing live or producing in his home studio, every project is driven by passion. With a growing fanbase across India and the Bengali diaspora, Arnab Banerjee stands at the forefront of a new generation of Bengali musicians — proud of their roots and fearless in exploring the future.
-            </p>
-
-            <div class="social-icons d-flex flex-wrap gap-3">
-            <a class="social-icon text-primary fs-4" href="https://www.linkedin.com/in/arnab-banerjee-indra" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            <a class="social-icon text-danger fs-4" href="https://www.instagram.com/arnab_banerjee_indra" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a class="social-icon text-info fs-4" href="https://twitter.com/arnab_indra_b" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a class="social-icon text-primary fs-4" href="https://www.facebook.com/arnab.banerjee.singer" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <!-- CTA Buttons -->
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a href="#songs" class="btn btn-lg btn-warning rounded-pill shadow">
+                🎵 Listen to My Songs
+            </a>
+            <a href="#contact" class="btn btn-lg btn-outline-light rounded-pill shadow">
+                📩 Contact Me
+            </a>
             </div>
         </div>
     </section>
 
+    <hr class="m-0" />
+
+    <!-- Movies -->
+    <section class="resume-section" id="movies">
+        <div class="resume-section-content">
+            <h2 class="mb-5">Popular Songs</h2>
+            <ul class="fa-ul mb-0">
+                <li class="song-item" onclick="toggleDetails('song1')">
+                    <span class="fa-li"><i class="fas fa-music text-primary"></i></span>
+                    <strong>Pora Baanshi</strong> (OST)
+                    <div id="song1" class="song-details">
+                        Featured in the film *Pora Baanshi*, this track marked Arnab Banerjee’s debut as a playback singer in Bengali cinema.
+                        The song gained popularity for its emotional depth and classical fusion arrangement.
+                    </div>
+                </li>
+                <li class="song-item" onclick="toggleDetails('song2')">
+                    <span class="fa-li"><i class="fas fa-music text-primary"></i></span>
+                    <strong>Swapna Puraner Deshe</strong>
+                    <div id="song2" class="song-details">
+                        A dreamy ballad sung by Arnab Banerjee (Indra), this track blends Rabindra Sangeet influences with a contemporary cinematic soundscape.
+                        It became a sleeper hit among young Bengali audiences.
+                    </div>
+                </li>
+                <li class="song-item" onclick="toggleDetails('song3')">
+                    <span class="fa-li"><i class="fas fa-music text-primary"></i></span>
+                    <strong>Ami Rabindranath 2</strong>
+                    <div id="song3" class="song-details">
+                        This experimental track reimagines Tagore’s verses with a modern orchestral backdrop.
+                        Arnab’s voice gives it a devotional yet progressive vibe, widely praised in indie music circles.
+                    </div>
+                </li>
+                <li class="song-item" onclick="toggleDetails('song4')">
+                    <span class="fa-li"><i class="fas fa-music text-primary"></i></span>
+                    <strong>Panta Bhaater Biriyani</strong>
+                    <div id="song4" class="song-details">
+                        A satire-pop number where Arnab Banerjee showcases his versatility, both vocally and creatively.
+                        This song trended on YouTube and was used in meme culture for its clever lyrics and catchy melody.
+                    </div>
+                </li>
+                <li class="song-item" onclick="toggleDetails('song5')">
+                    <span class="fa-li"><i class="fas fa-music text-primary"></i></span>
+                    45+ Original Singles on Spotify, JioSaavn, Amazon Music
+                    <div id="song5" class="song-details">
+                        Arnab Banerjee (Indra) has independently released over 45 original Bengali songs across all major streaming platforms.
+                        His works explore themes of love, identity, nostalgia, and modern Bengali life.
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
 
     <hr class="m-0" />
 
@@ -235,79 +283,10 @@
         </div>
     </section>
 
-
-
     <hr class="m-0" />
 
-    <!-- Skills -->
-    <section class="resume-section" id="skills">
-        <div class="resume-section-content">
-            <h2 class="mb-5">Music Skills</h2>
-            <div class="subheading mb-3">Genres & Strengths</div>
-            <ul>
-                <li>Hindustani Classical Vocals (Trained)</li>
-                <li>Bengali Playback & Modern Songs</li>
-                <li>Live Stage Performance</li>
-                <li>Studio Recording & Music Arrangement</li>
-            </ul>
-        </div>
-    </section>
-
-    <hr class="m-0" />
-
-    <!-- Movies -->
-    <section class="resume-section" id="interests">
-        <div class="resume-section-content">
-            <h2 class="mb-5">Popular Songs</h2>
-            <ul class="fa-ul mb-0">
-                <li class="song-item" onclick="toggleDetails('song1')">
-                    <span class="fa-li"><i class="fas fa-music text-primary"></i></span>
-                    <strong>Pora Baanshi</strong> (OST)
-                    <div id="song1" class="song-details">
-                        Featured in the film *Pora Baanshi*, this track marked Arnab Banerjee’s debut as a playback singer in Bengali cinema.
-                        The song gained popularity for its emotional depth and classical fusion arrangement.
-                    </div>
-                </li>
-                <li class="song-item" onclick="toggleDetails('song2')">
-                    <span class="fa-li"><i class="fas fa-music text-primary"></i></span>
-                    <strong>Swapna Puraner Deshe</strong>
-                    <div id="song2" class="song-details">
-                        A dreamy ballad sung by Arnab Banerjee (Indra), this track blends Rabindra Sangeet influences with a contemporary cinematic soundscape.
-                        It became a sleeper hit among young Bengali audiences.
-                    </div>
-                </li>
-                <li class="song-item" onclick="toggleDetails('song3')">
-                    <span class="fa-li"><i class="fas fa-music text-primary"></i></span>
-                    <strong>Ami Rabindranath 2</strong>
-                    <div id="song3" class="song-details">
-                        This experimental track reimagines Tagore’s verses with a modern orchestral backdrop.
-                        Arnab’s voice gives it a devotional yet progressive vibe, widely praised in indie music circles.
-                    </div>
-                </li>
-                <li class="song-item" onclick="toggleDetails('song4')">
-                    <span class="fa-li"><i class="fas fa-music text-primary"></i></span>
-                    <strong>Panta Bhaater Biriyani</strong>
-                    <div id="song4" class="song-details">
-                        A satire-pop number where Arnab Banerjee showcases his versatility, both vocally and creatively.
-                        This song trended on YouTube and was used in meme culture for its clever lyrics and catchy melody.
-                    </div>
-                </li>
-                <li class="song-item" onclick="toggleDetails('song5')">
-                    <span class="fa-li"><i class="fas fa-music text-primary"></i></span>
-                    45+ Original Singles on Spotify, JioSaavn, Amazon Music
-                    <div id="song5" class="song-details">
-                        Arnab Banerjee (Indra) has independently released over 45 original Bengali songs across all major streaming platforms.
-                        His works explore themes of love, identity, nostalgia, and modern Bengali life.
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <hr class="m-0" />
-
-    <!-- Awards -->
-    <section class="resume-section" id="awards">
+    <!-- Recognition -->
+    <section class="resume-section" id="recognition">
         <div class="resume-section-content">
             <h2 class="mb-5">Recognition</h2>
             <ul class="fa-ul mb-0">
@@ -358,10 +337,70 @@
         </div>
     </section>
 
+    <!-- About -->
+    <section class="resume-section bg-light" id="about" style="padding-top: 60px;">
+        <div class="resume-section-content">
+            <h1 class="mb-3 display-4 fw-bold text-dark">Arnab <span class="text-primary">Banerjee</span></h1>
+            <p class="text-muted mb-4">Playback Singer · Composer · Indie Artist</p>
+
+            <p class="lead text-justify">
+            Arnab Banerjee, widely known by his artistic name <strong>Indra</strong>, is a passionate Indian playback singer, independent music composer, and rising voice in the Bengali music industry. His sound is defined by soulful expression, nuanced classical training, and a bold willingness to experiment with genres. With over 45 officially released tracks on platforms such as <strong>Spotify, Amazon Music, Apple Music, JioSaavn</strong>, and YouTube, Arnab has carved out a unique space that bridges heritage and innovation.
+            </p>
+
+            <p class="lead text-justify">
+            Born and raised in Kolkata, Arnab's musical journey began early under the tutelage of renowned gurus in Hindustani classical music. His dedication to voice culture and raga-based training laid a solid foundation that reflects in every performance. However, Arnab has never limited himself to traditionalism. He ventured into playback singing for Bengali feature films like <strong>Pora Baanshi</strong>, <strong>Ami Rabindranath 2</strong>, and <strong>Panta Bhaater Biriyani</strong>, delivering melodies that stay with listeners long after the credits roll.
+            </p>
+
+            <p class="lead text-justify">
+            As an independent artist, Arnab is celebrated for his expressive vocal style that resonates with both mainstream and indie audiences. His voice carries a rare emotive depth — blending the sensitivity of ghazals, the structure of classical music, and the vibrancy of modern pop-folk fusion. From soulful ballads to energetic contemporary tracks, his singing adds authenticity and emotional weight to each composition. Songs like <em>Ei Shohor</em> and <em>Swapna Puraner Deshe</em> showcase his vocal range and musical adaptability, and have been featured across major streaming platforms including Spotify and JioSaavn.
+            </p>
+
+            <p class="lead text-justify">
+            Arnab’s music journey is steadily evolving, powered by his own commitment to growth and genuine love for music. While he has not yet performed on national television or been officially ranked by radio broadcasters, his tracks have organically reached thousands of listeners across digital platforms. With over 45 original releases available globally, he continues to build a loyal audience drawn to the authenticity of his voice and lyrical content. Arnab's artistic focus is clear: to create emotionally resonant music that blends heritage, heart, and innovation.
+            </p>
+
+            <p class="lead text-justify mb-5">
+            Beyond his musical achievements, Arnab is known for his humility, poetic writing, and deep respect for Bengali language and literature. Whether performing live or producing in his home studio, every project is driven by passion. With a growing fanbase across India and the Bengali diaspora, Arnab Banerjee stands at the forefront of a new generation of Bengali musicians — proud of their roots and fearless in exploring the future.
+            </p>
+
+            <div class="social-icons d-flex flex-wrap gap-3">
+            <a class="social-icon text-primary fs-4" href="https://www.linkedin.com/in/arnab-banerjee-indra" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a class="social-icon text-danger fs-4" href="https://www.instagram.com/arnab_banerjee_indra" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a class="social-icon text-info fs-4" href="https://twitter.com/arnab_indra_b" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a class="social-icon text-primary fs-4" href="https://www.facebook.com/arnab.banerjee.singer" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <hr class="m-0" />
+
+    <!-- Skills -->
+    <section class="resume-section" id="skills">
+        <div class="resume-section-content">
+            <h2 class="mb-5">Music Skills</h2>
+            <div class="subheading mb-3">Genres & Strengths</div>
+            <ul>
+                <li>Hindustani Classical Vocals (Trained)</li>
+                <li>Bengali Playback & Modern Songs</li>
+                <li>Live Stage Performance</li>
+                <li>Studio Recording & Music Arrangement</li>
+            </ul>
+        </div>
+    </section>
+
+    <hr class="m-0" />
+
     <!-- Contact Form -->
     <section class="contact-section" id="contact">
         <div class="mt-5 bg-white p-4 rounded shadow-sm">
             <h2 class="mb-5">Contact me</h2>
+
+            <div class="contact-box bg-white p-4 rounded shadow-sm mb-4">
+            <p class="mb-1"><strong>Location:</strong> Kolkata, West Bengal, 700129</p>
+            <p class="mb-1"><strong>Phone:</strong> +91 90734 64554</p>
+            <p class="mb-1"><strong>Email:</strong> <a href="mailto:contact@indravoice.com">contact@indravoice.com</a></p>
+            </div>
+
             <form id="contactForm">
                 <div class="mb-3">
                     <label for="name" class="form-label">Full Name</label>
