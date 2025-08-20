@@ -464,6 +464,76 @@
             </div>
         </section>
 
+        <section class="resume-section" id="gallery">
+            <div class="resume-section-content">
+                <h2 class="mb-5">Photo Gallery</h2>
+                <div class="subheading mb-3">Memorable Moments & Performances</div>
+                <div class="gallery-grid">
+
+                    <!-- Real CDN image -->
+                    <div class="gallery-item">
+                        <img src="https://scontent.fccu20-1.fna.fbcdn.net/v/t39.30808-6/481081569_945368214461221_2419233010611999610_n.jpg?stp=c0.86.780.780a_dst-jpg_s552x414_tt6&_nc_cat=109&ccb=1-7&_nc_sid=50ad20&_nc_ohc=Y2MbhQ2T81EQ7kNvwFNkNUM&_nc_oc=Adk9A6R0cvgXZGyNw_WnURET9HsE1tdaJ8iPD_j73frj-ifQ2LHFULe4LVOgcpcM1r147iFKnl_FchOfz0TRYEe5&_nc_zt=23&_nc_ht=scontent.fccu20-1.fna&_nc_gid=xhY8sZwPEVHNrpO9-WswQA&oh=00_AfUjuGUnj_HFlzzM0Ouvz_ztBxfEILOA8IVnHLwlPL5MBQ&oe=68AAA1DB"
+                            alt="Arnab Banerjee Live Performance">
+                    </div>
+
+                    <!-- Placeholders for your Facebook images -->
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/400x300?text=Photo+1" alt="Arnab Banerjee Music Journey">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/400x300?text=Photo+2"
+                            alt="Arnab Banerjee Studio Recording">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/400x300?text=Photo+3" alt="Arnab Banerjee Stage Show">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/400x300?text=Photo+4"
+                            alt="Arnab Banerjee Playback Singing">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <style>
+            /* Gallery styling */
+            #gallery {
+                background: linear-gradient(135deg, #fdfbfb, #ebedee);
+                padding: 50px 0;
+            }
+
+            .gallery-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                gap: 20px;
+            }
+
+            .gallery-item {
+                overflow: hidden;
+                border-radius: 12px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .gallery-item img {
+                width: 100%;
+                height: auto;
+                display: block;
+                transition: transform 0.4s ease;
+            }
+
+            .gallery-item:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+            }
+
+            .gallery-item:hover img {
+                transform: scale(1.1);
+            }
+        </style>
+
+
         <!-- Cinematic & SEO-Friendly Styling -->
         <style>
             .cinematic-songs {
