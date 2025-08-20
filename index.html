@@ -465,142 +465,168 @@
             </div>
         </section>
 
-        <section class="resume-section bg-dark text-light py-5" id="gallery">
-            <div class="container text-center">
-                <h2 class="display-4 fw-bold mb-5 text-warning">📸 Image Gallery</h2>
-                <div class="row g-3 justify-content-center">
+        <!-- Cinematic & SEO-Friendly Styling -->
+        <style>
+            .cinematic-songs {
+                background: linear-gradient(135deg, #161623, #2c2f4a);
+                color: #ececec;
+                padding: 80px 0;
+            }
 
-                    <!-- Image 1 -->
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <img src="https://scontent.fccu20-1.fna.fbcdn.net/v/t39.30808-6/481081569_945368214461221_2419233010611999610_n.jpg"
-                            class="img-fluid gallery-img" alt="Gallery Image 1">
-                    </div>
+            .section-title {
+                font-size: 2.5rem;
+                color: #ffca28;
+                text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+            }
 
-                    <!-- Image 2 -->
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <img src="https://scontent.fccu20-1.fna.fbcdn.net/v/t39.30808-6/732791595718885_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=yD2BgB-xyz0Q7kNvgEo&_nc_ht=scontent.fccu20-1.fna&oh=00_AfYpQ9LJ7NtnN8M6&oe=66C6E7AB"
-                            class="img-fluid gallery-img" alt="Gallery Image 2">
-                    </div>
+            .gradient-text {
+                background: linear-gradient(to right, #ff8a65, #f06292);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
 
-                    <!-- Image 3 -->
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <img src="https://scontent.fccu20-1.fna.fbcdn.net/v/t39.30808-6/662454099419302_n.jpg"
-                            class="img-fluid gallery-img" alt="Gallery Image 3">
-                    </div>
+            .section-intro {
+                max-width: 800px;
+                margin: 0 auto 40px;
+                font-size: 1.05rem;
+                line-height: 1.6;
+                color: #cfcfcf;
+            }
 
-                    <!-- Image 4 -->
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <img src="https://scontent.fccu20-1.fna.fbcdn.net/v/t39.30808-6/660554909609221_n.jpg"
-                            class="img-fluid gallery-img" alt="Gallery Image 4">
-                    </div>
+            .cinematic-card {
+                background: #222532;
+                border-radius: 20px;
+                overflow: hidden;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
 
-                    <!-- Image 5 -->
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <img src="https://scontent.fccu20-1.fna.fbcdn.net/v/t39.30808-6/657636176567761_n.jpg"
-                            class="img-fluid gallery-img" alt="Gallery Image 5">
-                    </div>
+            .cinematic-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 10px 30px rgba(255, 138, 101, 0.5);
+            }
 
-                    <!-- Image 6 -->
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <img src="https://scontent.fccu20-1.fna.fbcdn.net/v/t39.30808-6/657031599961552_n.jpg"
-                            class="img-fluid gallery-img" alt="Gallery Image 6">
-                    </div>
+            .card-details {
+                color: #ddd;
+                margin-top: 8px;
+                font-size: 0.95rem;
+            }
+        </style>
 
-                    <!-- Image 7 -->
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <img src="https://scontent.fccu20-1.fna.fbcdn.net/v/t39.30808-6/654269330237779_n.jpg"
-                            class="img-fluid gallery-img" alt="Gallery Image 7">
-                    </div>
+        <hr class="m-0" />
 
-                    <!-- Image 8 -->
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <img src="https://scontent.fccu20-1.fna.fbcdn.net/v/t39.30808-6/654269076904471_n.jpg"
-                            class="img-fluid gallery-img" alt="Gallery Image 8">
-                    </div>
+        <!-- 🎬 Cinematic Image Gallery Section -->
+        <section id="gallery" class="py-16 bg-gradient-to-b from-black via-gray-900 to-black text-white relative">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12 tracking-wide">
+                    🎶 Arnab Banerjee Indra – Cinematic Photo Gallery
+                </h2>
 
-                    <!-- Image 9 -->
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <img src="https://scontent.fccu20-1.fna.fbcdn.net/v/t39.30808-6/647718610892851_n.jpg"
-                            class="img-fluid gallery-img" alt="Gallery Image 9">
-                    </div>
+                <!-- Gallery Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
-                    <!-- Image 10 -->
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <img src="https://scontent.fccu20-1.fna.fbcdn.net/v/t39.30808-6/643293174668728_n.jpg"
-                            class="img-fluid gallery-img" alt="Gallery Image 10">
-                    </div>
+                    <!-- ✅ 29 Images -->
+                    <img src="images/gallery/arnab-banerjee-indra-playback-singer-1.jpg.jpg"
+                        alt="Arnab Banerjee Indra playback singer live concert performance"
+                        class="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-110 hover:opacity-90 transition duration-500">
 
-                    <!-- Image 11 -->
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <img src="https://scontent.fccu20-1.fna.fbcdn.net/v/t39.30808-6/643292704668775_n.jpg"
-                            class="img-fluid gallery-img" alt="Gallery Image 11">
-                    </div>
+                    <img src="images/gallery/arnab-banerjee-indra-playback-singer-2.jpg.jpg"
+                        alt="Arnab Banerjee Indra playback singer studio recording session"
+                        class="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-110 hover:opacity-90 transition duration-500">
 
-                    <!-- Image 12 -->
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <img src="https://scontent.fccu20-1.fna.fbcdn.net/v/t39.30808-6/620640843600628_n.jpg"
-                            class="img-fluid gallery-img" alt="Gallery Image 12">
-                    </div>
+                    <img src="images/gallery/arnab-banerjee-indra-playback-singer-3.jpg.jpg"
+                        alt="Arnab Banerjee Indra playback singer romantic cinematic song"
+                        class="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-110 hover:opacity-90 transition duration-500">
 
-                    <!-- Image 13 -->
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <img src="https://scontent.fccu20-1.fna.fbcdn.net/v/t39.30808-6/540039458327434_n.jpg"
-                            class="img-fluid gallery-img" alt="Gallery Image 13">
-                    </div>
+                    <img src="images/gallery/arnab-banerjee-indra-playback-singer-4.jpg.jpg"
+                        alt="Arnab Banerjee Indra playback singer Bengali music industry"
+                        class="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-110 hover:opacity-90 transition duration-500">
 
-                    <!-- Image 14 -->
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <img src="https://scontent.fccu20-1.fna.fbcdn.net/v/t39.30808-6/467610692236978_n.jpg"
-                            class="img-fluid gallery-img" alt="Gallery Image 14">
-                    </div>
+                    <img src="images/gallery/arnab-banerjee-indra-playback-singer-5.jpg.jpg"
+                        alt="Arnab Banerjee Indra playback singer stage show performance"
+                        class="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-110 hover:opacity-90 transition duration-500">
 
-                    <!-- Image 15 -->
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <img src="https://scontent.fccu20-1.fna.fbcdn.net/v/t39.30808-6/449901187341262_n.jpg"
-                            class="img-fluid gallery-img" alt="Gallery Image 15">
-                    </div>
+                    <img src="images/gallery/arnab-banerjee-indra-playback-singer-6.jpg.jpg"
+                        alt="Arnab Banerjee Indra playback singer cinematic Bengali playback"
+                        class="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-110 hover:opacity-90 transition duration-500">
 
-                    <!-- Image 16 -->
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <img src="https://scontent.fccu20-1.fna.fbcdn.net/v/t39.30808-6/449901124007935_n.jpg"
-                            class="img-fluid gallery-img" alt="Gallery Image 16">
-                    </div>
+                    <img src="images/gallery/arnab-banerjee-indra-playback-singer-7.jpg.jpg"
+                        alt="Arnab Banerjee Indra playback singer live orchestra show"
+                        class="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-110 hover:opacity-90 transition duration-500">
 
-                    <!-- Image 17 -->
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <img src="https://scontent.fccu20-1.fna.fbcdn.net/v/t39.30808-6/376031614728220_n.jpg"
-                            class="img-fluid gallery-img" alt="Gallery Image 17">
-                    </div>
+                    <img src="images/gallery/arnab-banerjee-indra-playback-singer-8.jpg.jpg"
+                        alt="Arnab Banerjee Indra playback singer music arrangement"
+                        class="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-110 hover:opacity-90 transition duration-500">
 
-                    <!-- Image 18 -->
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <img src="https://scontent.fccu20-1.fna.fbcdn.net/v/t39.30808-6/366927268971988_n.jpg"
-                            class="img-fluid gallery-img" alt="Gallery Image 18">
-                    </div>
+                    <img src="images/gallery/arnab-banerjee-indra-playback-singer-9.jpg.jpg"
+                        alt="Arnab Banerjee Indra playback singer recording session"
+                        class="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-110 hover:opacity-90 transition duration-500">
 
-                    <!-- Image 19 -->
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <img src="https://scontent.fccu20-1.fna.fbcdn.net/v/t39.30808-6/366557245675657_n.jpg"
-                            class="img-fluid gallery-img" alt="Gallery Image 19">
-                    </div>
+                    <img src="images/gallery/arnab-banerjee-indra-playback-singer-10.jpg.jpg"
+                        alt="Arnab Banerjee Indra playback singer cinematic photoshoot"
+                        class="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-110 hover:opacity-90 transition duration-500">
+
+                    <!-- Continue same pattern for all images up to 29 -->
+                    <img src="images/gallery/arnab-banerjee-indra-playback-singer-11.jpg.jpg"
+                        alt="Arnab Banerjee Indra playback singer studio work"
+                        class="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-110 transition duration-500">
+                    <img src="images/gallery/arnab-banerjee-indra-playback-singer-12.jpg.jpg"
+                        alt="Arnab Banerjee Indra playback singer musical creativity"
+                        class="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-110 transition duration-500">
+                    <img src="images/gallery/arnab-banerjee-indra-playback-singer-13.jpg.jpg"
+                        alt="Arnab Banerjee Indra playback singer film playback song"
+                        class="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-110 transition duration-500">
+                    <img src="images/gallery/arnab-banerjee-indra-playback-singer-14.jpg.jpg"
+                        alt="Arnab Banerjee Indra playback singer romantic performance"
+                        class="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-110 transition duration-500">
+                    <img src="images/gallery/arnab-banerjee-indra-playback-singer-15.jpg.jpg"
+                        alt="Arnab Banerjee Indra playback singer emotional song"
+                        class="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-110 transition duration-500">
+                    <img src="images/gallery/arnab-banerjee-indra-playback-singer-16.jpg.jpg"
+                        alt="Arnab Banerjee Indra playback singer professional music"
+                        class="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-110 transition duration-500">
+                    <img src="images/gallery/arnab-banerjee-indra-playback-singer-17.jpg.jpg"
+                        alt="Arnab Banerjee Indra playback singer cinematic moment"
+                        class="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-110 transition duration-500">
+                    <img src="images/gallery/arnab-banerjee-indra-playback-singer-18.jpg.jpg"
+                        alt="Arnab Banerjee Indra playback singer soulful performance"
+                        class="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-110 transition duration-500">
+                    <img src="images/gallery/arnab-banerjee-indra-playback-singer-19.jpg.jpg"
+                        alt="Arnab Banerjee Indra playback singer stage concert"
+                        class="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-110 transition duration-500">
+                    <img src="images/gallery/arnab-banerjee-indra-playback-singer-20.jpg.jpg"
+                        alt="Arnab Banerjee Indra playback singer rehearsal session"
+                        class="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-110 transition duration-500">
+                    <img src="images/gallery/arnab-banerjee-indra-playback-singer-21.jpg.jpg"
+                        alt="Arnab Banerjee Indra playback singer behind the scenes"
+                        class="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-110 transition duration-500">
+                    <img src="images/gallery/arnab-banerjee-indra-playback-singer-22.jpg.jpg"
+                        alt="Arnab Banerjee Indra playback singer cultural show"
+                        class="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-110 transition duration-500">
+                    <img src="images/gallery/arnab-banerjee-indra-playback-singer-23.jpg.jpg"
+                        alt="Arnab Banerjee Indra playback singer professional event"
+                        class="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-110 transition duration-500">
+                    <img src="images/gallery/arnab-banerjee-indra-playback-singer-24.jpg.jpg"
+                        alt="Arnab Banerjee Indra playback singer playback studio"
+                        class="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-110 transition duration-500">
+                    <img src="images/gallery/arnab-banerjee-indra-playback-singer-25.jpg.jpg"
+                        alt="Arnab Banerjee Indra playback singer live show"
+                        class="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-110 transition duration-500">
+                    <img src="images/gallery/arnab-banerjee-indra-playback-singer-26.jpg.jpg"
+                        alt="Arnab Banerjee Indra playback singer musical expression"
+                        class="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-110 transition duration-500">
+                    <img src="images/gallery/arnab-banerjee-indra-playback-singer-27.jpg.jpg"
+                        alt="Arnab Banerjee Indra playback singer film music"
+                        class="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-110 transition duration-500">
+                    <img src="images/gallery/arnab-banerjee-indra-playback-singer-28.jpg.jpg"
+                        alt="Arnab Banerjee Indra playback singer music video"
+                        class="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-110 transition duration-500">
+                    <img src="images/gallery/arnab-banerjee-indra-playback-singer-29.jpg.jpg"
+                        alt="Arnab Banerjee Indra playback singer romantic playback song"
+                        class="w-full h-64 object-cover rounded-2xl shadow-lg hover:scale-110 transition duration-500">
 
                 </div>
             </div>
         </section>
-
-        <style>
-            .gallery-img {
-                border-radius: 12px;
-                transition: transform 0.3s, box-shadow 0.3s;
-                cursor: pointer;
-            }
-
-            .gallery-img:hover {
-                transform: scale(1.08);
-                box-shadow: 0 8px 30px rgba(255, 204, 0, 0.6);
-            }
-        </style>
-
 
         <hr class="m-0" />
 
@@ -724,6 +750,7 @@
             }
         </style>
 
+        <hr class="m-0" />
 
         <!-- About -->
         <section class="resume-section text-white" id="about" style="padding: 100px 0; background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.9)), 
@@ -843,7 +870,6 @@
                 color: #ffc107 !important;
             }
         </style>
-
 
         <hr class="m-0" />
 
