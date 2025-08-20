@@ -515,14 +515,18 @@
         <hr class="m-0" />
 
         <section class="resume-section cinematic-songs" id="gallery" aria-label="Image Gallery of Arnab Banerjee">
-            <div class="gallery-header" style="width: 100%; float: right;">
+            <!-- Header at top -->
+            <div class="gallery-header">
                 <h1 class="gallery-title">Arnab Banerjee: Indra Playback Singer</h1>
-                <p class="gallery-subtitle">Explore the cinematic journey of Arnab Banerjee as the playback singer for
-                    the movie Indra. Behind-the-scenes moments, recording sessions, and exclusive portfolio.</p>
+                <p class="gallery-subtitle">
+                    Explore the cinematic journey of Arnab Banerjee as the playback singer for the movie Indra.
+                    Behind-the-scenes moments, recording sessions, and exclusive portfolio.
+                </p>
             </div>
 
-            <div class="gallery-grid" style="width: 100%; float: right;">
-                <!-- Image 1 -->
+            <!-- Image Grid -->
+            <div class="gallery-grid">
+                <!-- Example images: repeat for all 29 -->
                 <div class="gallery-item">
                     <img src="images/gallery/arnab-banerjee-indra-playback-singer-1.jpg.jpg"
                         alt="Arnab Banerjee recording in studio for Indra movie" class="gallery-image">
@@ -532,7 +536,6 @@
                     </div>
                 </div>
 
-                <!-- Image 2 -->
                 <div class="gallery-item">
                     <img src="images/gallery/arnab-banerjee-indra-playback-singer-2.jpg.jpg"
                         alt="Arnab Banerjee with music directors for Indra" class="gallery-image">
@@ -542,54 +545,12 @@
                     </div>
                 </div>
 
-                <!-- Image 3 -->
-                <div class="gallery-item">
-                    <img src="images/gallery/arnab-banerjee-indra-playback-singer-3.jpg.jpg"
-                        alt="Arnab Banerjee vocal practice for Indra songs" class="gallery-image">
-                    <div class="image-overlay">
-                        <h3 class="image-title">Vocal Preparation</h3>
-                        <p class="image-desc">Arnab practicing vocals before the recording session</p>
-                    </div>
-                </div>
-
-                <!-- Image 4 -->
-                <div class="gallery-item">
-                    <img src="images/gallery/arnab-banerjee-indra-playback-singer-4.jpg.jpg"
-                        alt="Arnab Banerjee with microphone in recording booth" class="gallery-image">
-                    <div class="image-overlay">
-                        <h3 class="image-title">In the Recording Booth</h3>
-                        <p class="image-desc">Capturing the perfect take for Indra's emotional ballad</p>
-                    </div>
-                </div>
-
-                <!-- Image 5 -->
-                <div class="gallery-item">
-                    <img src="images/gallery/arnab-banerjee-indra-playback-singer-5.jpg.jpg"
-                        alt="Arnab Banerjee discussing music score for Indra" class="gallery-image">
-                    <div class="image-overlay">
-                        <h3 class="image-title">Score Discussion</h3>
-                        <p class="image-desc">Reviewing musical notations with the composition team</p>
-                    </div>
-                </div>
-
-                <!-- Additional images would follow the same pattern with appropriate alt text and descriptions -->
-
-                <!-- Image 6 -->
-                <div class="gallery-item">
-                    <img src="images/gallery/arnab-banerjee-indra-playback-singer-6.jpg.jpg"
-                        alt="Arnab Banerjee taking a break during Indra recordings" class="gallery-image">
-                    <div class="image-overlay">
-                        <h3 class="image-title">Studio Break</h3>
-                        <p class="image-desc">Moments of relaxation between intense recording sessions</p>
-                    </div>
-                </div>
-
-                <!-- Continue for all 29 images with unique, descriptive alt text and overlay content -->
-
+                <!-- Add remaining images similarly -->
             </div>
         </section>
 
         <style>
+            /* Header styling */
             .gallery-header {
                 text-align: center;
                 margin-bottom: 3rem;
@@ -613,16 +574,18 @@
                 margin: 0 auto;
             }
 
+            /* Grid: 5 per row desktop */
             .gallery-grid {
                 display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                grid-template-columns: repeat(5, 1fr);
+                /* 5 images per row */
                 gap: 1.5rem;
             }
 
+            /* Gallery item styling */
             .gallery-item {
                 position: relative;
                 overflow: hidden;
-                float: left;
                 border-radius: 12px;
                 aspect-ratio: 4/5;
                 box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
@@ -646,6 +609,7 @@
                 transform: scale(1.08);
             }
 
+            /* Overlay */
             .image-overlay {
                 position: absolute;
                 bottom: 0;
@@ -674,52 +638,18 @@
                 color: #ccc;
             }
 
-            .modal {
-                display: none;
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, 0.95);
-                z-index: 1000;
-                overflow: hidden;
-            }
-
-            .modal-content {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100%;
-                padding: 2rem;
-            }
-
-            .modal-image {
-                max-width: 90%;
-                max-height: 90%;
-                object-fit: contain;
-                border-radius: 8px;
-                box-shadow: 0 5px 25px rgba(255, 138, 0, 0.2);
-            }
-
-            .close-modal {
-                position: absolute;
-                top: 25px;
-                right: 35px;
-                font-size: 3rem;
-                color: #fff;
-                cursor: pointer;
-                transition: color 0.3s;
-            }
-
-            .close-modal:hover {
-                color: #ff8a00;
+            /* Responsive */
+            @media (max-width: 1200px) {
+                .gallery-grid {
+                    grid-template-columns: repeat(3, 1fr);
+                    /* 3 images per row */
+                }
             }
 
             @media (max-width: 768px) {
                 .gallery-grid {
-                    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-                    gap: 1rem;
+                    grid-template-columns: repeat(2, 1fr);
+                    /* 2 images per row */
                 }
 
                 .gallery-title {
@@ -732,14 +662,11 @@
             }
 
             @media (max-width: 480px) {
-                .gallery-section {
-                    padding: 2rem 1rem;
-                }
-
                 .gallery-grid {
                     grid-template-columns: 1fr;
                 }
 
+                /* 1 image per row */
                 .gallery-title {
                     font-size: 1.8rem;
                 }
