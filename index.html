@@ -514,46 +514,292 @@
 
         <hr class="m-0" />
 
-        <!-- 🎬 Cinematic Image Gallery Section -->
-        <section id="gallery" class="py-16 bg-black text-white relative">
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center mb-12 tracking-wide">
-                    🎶 Arnab Banerjee Indra – Cinematic Photo Gallery
-                </h2>
+        <section class="resume-section cinematic-songs" id="gallery" aria-label="Image Gallery of Arnab Banerjee">
+            <div class="gallery-header">
+                <h1 class="gallery-title">Arnab Banerjee: Indra Playback Singer</h1>
+                <p class="gallery-subtitle">Explore the cinematic journey of Arnab Banerjee as the playback singer for
+                    the movie Indra. Behind-the-scenes moments, recording sessions, and exclusive portfolio.</p>
+            </div>
 
-                <!-- Gallery Grid -->
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    <!-- Loop through your images -->
-                    <a href="images/gallery/arnab-banerjee-indra-playback-singer-1.jpg.jpg" class="group relative"
-                        data-lightbox="gallery">
-                        <img src="images/gallery/arnab-banerjee-indra-playback-singer-1.jpg.jpg"
-                            alt="Arnab Banerjee Indra Playback Singer live performance"
-                            class="w-full h-64 object-cover rounded-2xl shadow-lg transform transition duration-500 group-hover:scale-110 group-hover:opacity-90">
-                    </a>
-
-                    <a href="images/gallery/arnab-banerjee-indra-playback-singer-2.jpg.jpg" data-lightbox="gallery"
-                        class="group relative">
-                        <img src="images/gallery/arnab-banerjee-indra-playback-singer-2.jpg.jpg"
-                            alt="Arnab Banerjee Indra Playback Singer studio session"
-                            class="w-full h-64 object-cover rounded-2xl shadow-lg transform transition duration-500 group-hover:scale-110 group-hover:opacity-90">
-                    </a>
-
-                    <a href="images/gallery/arnab-banerjee-indra-playback-singer-3.jpg.jpg" data-lightbox="gallery"
-                        class="group relative">
-                        <img src="images/gallery/arnab-banerjee-indra-playback-singer-3.jpg.jpg"
-                            alt="Arnab Banerjee Indra Playback Singer cinematic moment"
-                            class="w-full h-64 object-cover rounded-2xl shadow-lg transform transition duration-500 group-hover:scale-110 group-hover:opacity-90">
-                    </a>
-
-                    <!-- ✅ Continue same pattern for all 29 images -->
-                    <!-- Just replace the number in filename and alt text slightly varied for SEO -->
+            <div class="gallery-grid">
+                <!-- Image 1 -->
+                <div class="gallery-item">
+                    <img src="images/gallery/arnab-banerjee-indra-playback-singer-1.jpg.jpg"
+                        alt="Arnab Banerjee recording in studio for Indra movie" class="gallery-image">
+                    <div class="image-overlay">
+                        <h3 class="image-title">Studio Recording Session</h3>
+                        <p class="image-desc">Arnab Banerjee recording vocals for Indra soundtrack</p>
+                    </div>
                 </div>
+
+                <!-- Image 2 -->
+                <div class="gallery-item">
+                    <img src="images/gallery/arnab-banerjee-indra-playback-singer-2.jpg.jpg"
+                        alt="Arnab Banerjee with music directors for Indra" class="gallery-image">
+                    <div class="image-overlay">
+                        <h3 class="image-title">Collaboration Moment</h3>
+                        <p class="image-desc">Working with renowned music directors on Indra project</p>
+                    </div>
+                </div>
+
+                <!-- Image 3 -->
+                <div class="gallery-item">
+                    <img src="images/gallery/arnab-banerjee-indra-playback-singer-3.jpg.jpg"
+                        alt="Arnab Banerjee vocal practice for Indra songs" class="gallery-image">
+                    <div class="image-overlay">
+                        <h3 class="image-title">Vocal Preparation</h3>
+                        <p class="image-desc">Arnab practicing vocals before the recording session</p>
+                    </div>
+                </div>
+
+                <!-- Image 4 -->
+                <div class="gallery-item">
+                    <img src="images/gallery/arnab-banerjee-indra-playback-singer-4.jpg.jpg"
+                        alt="Arnab Banerjee with microphone in recording booth" class="gallery-image">
+                    <div class="image-overlay">
+                        <h3 class="image-title">In the Recording Booth</h3>
+                        <p class="image-desc">Capturing the perfect take for Indra's emotional ballad</p>
+                    </div>
+                </div>
+
+                <!-- Image 5 -->
+                <div class="gallery-item">
+                    <img src="images/gallery/arnab-banerjee-indra-playback-singer-5.jpg.jpg"
+                        alt="Arnab Banerjee discussing music score for Indra" class="gallery-image">
+                    <div class="image-overlay">
+                        <h3 class="image-title">Score Discussion</h3>
+                        <p class="image-desc">Reviewing musical notations with the composition team</p>
+                    </div>
+                </div>
+
+                <!-- Additional images would follow the same pattern with appropriate alt text and descriptions -->
+
+                <!-- Image 6 -->
+                <div class="gallery-item">
+                    <img src="images/gallery/arnab-banerjee-indra-playback-singer-6.jpg.jpg"
+                        alt="Arnab Banerjee taking a break during Indra recordings" class="gallery-image">
+                    <div class="image-overlay">
+                        <h3 class="image-title">Studio Break</h3>
+                        <p class="image-desc">Moments of relaxation between intense recording sessions</p>
+                    </div>
+                </div>
+
+                <!-- Continue for all 29 images with unique, descriptive alt text and overlay content -->
+
             </div>
         </section>
 
-        <!-- Lightbox Script (CDN) -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+        <div class="modal" id="imageModal">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <div class="modal-content">
+                <img class="modal-image" id="modalImg" src="" alt="">
+            </div>
+        </div>
+
+        <script>
+            // Modal functionality for image preview
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImg');
+            const closeModal = document.getElementById('closeModal');
+
+            galleryItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const imgSrc = item.querySelector('img').src;
+                    const imgAlt = item.querySelector('img').alt;
+                    modalImg.src = imgSrc;
+                    modalImg.alt = imgAlt;
+                    modal.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            closeModal.addEventListener('click', () => {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
+            // Keyboard accessibility
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal.style.display === 'block') {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        </script>
+
+
+        <style>
+            .gallery-section {
+                padding: 4rem 2rem;
+                max-width: 1400px;
+                margin: 0 auto;
+            }
+
+            .gallery-header {
+                text-align: center;
+                margin-bottom: 3rem;
+            }
+
+            .gallery-title {
+                font-size: 2.8rem;
+                margin-bottom: 1rem;
+                background: linear-gradient(45deg, #ff8a00, #e52e71);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                font-weight: 700;
+                letter-spacing: 1px;
+            }
+
+            .gallery-subtitle {
+                font-size: 1.2rem;
+                color: #aaa;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            .gallery-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 1.5rem;
+            }
+
+            .gallery-item {
+                position: relative;
+                overflow: hidden;
+                border-radius: 12px;
+                aspect-ratio: 4/5;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+                transition: transform 0.4s ease, box-shadow 0.4s ease;
+                cursor: pointer;
+            }
+
+            .gallery-item:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 12px 25px rgba(230, 46, 113, 0.25);
+            }
+
+            .gallery-image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.5s ease;
+            }
+
+            .gallery-item:hover .gallery-image {
+                transform: scale(1.08);
+            }
+
+            .image-overlay {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+                padding: 2rem 1.5rem 1.5rem;
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.4s ease, transform 0.4s ease;
+            }
+
+            .gallery-item:hover .image-overlay {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .image-title {
+                font-size: 1.1rem;
+                font-weight: 600;
+                margin-bottom: 0.5rem;
+            }
+
+            .image-desc {
+                font-size: 0.9rem;
+                color: #ccc;
+            }
+
+            .modal {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.95);
+                z-index: 1000;
+                overflow: hidden;
+            }
+
+            .modal-content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                padding: 2rem;
+            }
+
+            .modal-image {
+                max-width: 90%;
+                max-height: 90%;
+                object-fit: contain;
+                border-radius: 8px;
+                box-shadow: 0 5px 25px rgba(255, 138, 0, 0.2);
+            }
+
+            .close-modal {
+                position: absolute;
+                top: 25px;
+                right: 35px;
+                font-size: 3rem;
+                color: #fff;
+                cursor: pointer;
+                transition: color 0.3s;
+            }
+
+            .close-modal:hover {
+                color: #ff8a00;
+            }
+
+            @media (max-width: 768px) {
+                .gallery-grid {
+                    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+                    gap: 1rem;
+                }
+
+                .gallery-title {
+                    font-size: 2.2rem;
+                }
+
+                .gallery-subtitle {
+                    font-size: 1rem;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .gallery-section {
+                    padding: 2rem 1rem;
+                }
+
+                .gallery-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .gallery-title {
+                    font-size: 1.8rem;
+                }
+            }
+        </style>
+
+
+
 
 
         <hr class="m-0" />
