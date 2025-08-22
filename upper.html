@@ -123,7 +123,7 @@
         <nav class="navbarh">
             <ul class="nav-menu">
                 <li><a href="bengali-playback-singer-movies-filmography.html">Movies</a></li>
-                <!-- Submenu Example -->
+
                 <li class="has-submenu">
                     <a href="#singing">Singing ▾</a>
                     <ul class="submenu">
@@ -134,8 +134,7 @@
                         <li><a href="arnab-banerjee-bengali-music-genres.html">Genres</a></li>
                     </ul>
                 </li>
-                
-                <!-- Submenu Example -->
+
                 <li class="has-submenu">
                     <a href="#lyrics">Lyrics ▾</a>
                     <ul class="submenu">
@@ -148,10 +147,10 @@
                 <li class="has-submenu">
                     <a href="#news">News ▾</a>
                     <ul class="submenu">
-                       <li><a href="exclusive-interview-arnab-banerjee-bengali-playback-singer.html">Exclusive Q&A with Arnab Banerjee: The Rising Star of Bengali Music</a></li>
-                        <li><a href="arnab-banerjee-rising-star-bengali-cinema.html">Arnab Banerjee: The Rising Star Lighting Up Bengali Cinema</a></li>
-                        <li><a href="bengali-film-songs-lyrics-melody-emotion-2022-2024.html">Bengali Film Songs – A Journey Through Lyrics, Melody & Emotion (2022–2024)</a></li>
-                     </ul>
+                        <li><a href="exclusive-interview-arnab-banerjee-bengali-playback-singer.html">Exclusive Q&A</a></li>
+                        <li><a href="arnab-banerjee-rising-star-bengali-cinema.html">Rising Star Bengali Cinema</a></li>
+                        <li><a href="bengali-film-songs-lyrics-melody-emotion-2022-2024.html">Film Songs Journey</a></li>
+                    </ul>
                 </li>
             </ul>
         </nav>
@@ -167,8 +166,11 @@
         .nav-menu {
             list-style: none;
             display: flex;
+            flex-wrap: wrap; /* allows menu to wrap to next line */
             justify-content: center;
-            gap: 2rem;
+            gap: 1.5rem;
+            margin: 0;
+            padding: 0;
         }
 
         .nav-menu li {
@@ -181,6 +183,7 @@
             font-size: 1rem;
             font-weight: 500;
             transition: color 0.3s;
+            white-space: nowrap; /* keeps link text on one line */
         }
 
         .nav-menu a:hover {
@@ -198,21 +201,15 @@
             list-style: none;
             min-width: 200px;
             border-radius: 6px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
         }
 
-        .submenu li {
-            padding: 0;
-        }
-
-        .submenu a {
+        .submenu li a {
             display: block;
             padding: 0.7rem 1rem;
-            color: #fff;
-            font-size: 0.95rem;
         }
 
-        .submenu a:hover {
+        .submenu li a:hover {
             background: #f39c12;
             color: #111;
         }
@@ -221,4 +218,14 @@
         .has-submenu:hover .submenu {
             display: block;
         }
+
+        /* Mobile adjustments (optional) */
+        @media(max-width: 767px) {
+            .nav-menu {
+                justify-content: flex-start;
+                gap: 1rem;
+                padding: 0.5rem 0;
+            }
+        }
     </style>
+</div>
