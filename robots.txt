@@ -1,0 +1,20 @@
+# robots.txt for Arnab Banerjee Official Website
+
+# Allow all search engines full access to public pages
+User-agent: *
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /scripts/
+Disallow: /login/
+Disallow: /register/
+
+# Allow crawling of important directories
+Allow: /images/
+Allow: /css/
+Allow: /js/
+Allow: /
+
+# Sitemap location (helps SEO)
+Sitemap: https://www.indravoice.in/sitemap.xml
