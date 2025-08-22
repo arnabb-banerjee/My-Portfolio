@@ -154,49 +154,47 @@
             <!-- Bengali Lyrics -->
             <h2>বাংলা সংস্করণ (Bengali Version)</h2>
             <pre lang="bn">
-                <p>প্রেম মানে দুটো কথা — ভালোবাসা বাস,
+                <span class="p-text">প্রেম মানে দুটো কথা — ভালোবাসা বাস,
                 প্রেম মানে ভালোবেসে গড়ে তোলা গাছ।
                 প্রেম মানে লোক দেখানো ভালোবাসা স্কুলে,
-                প্রেম মানে আবার প্রেম — আগেরটাকে ছেড়ে।</p>
+                প্রেম মানে আবার প্রেম — আগেরটাকে ছেড়ে।</span>
 
-                <p>প্রথম দেখা, প্রথম কথা,
+                <span class="p-text">প্রথম দেখা, প্রথম কথা,
                 খুব আনন্দ, খুব আনন্দ।
                 কিন্তু ভাই, প্রথম ব্যথা যখন পাবি,
-                তখন বুঝবি ঠেলা…</p>
+                তখন বুঝবি ঠেলা…</span>
 
-                <p>তখন তুই নিজেই দিবি সব দোষ,
+                <span class="p-text">তখন তুই নিজেই দিবি সব দোষ,
                 ভালোবাসিস তুই যাকে।
                 তখন তুই নিজের মনের ব্যথা,
-                বলবি সবার কাছে দুঃখের কথা।</p>
+                বলবি সবার কাছে দুঃখের কথা।</span>
             </pre>
 
             <!-- English Lyrics -->
             <h2>English Version</h2>
             <pre lang="en">
-                <p>Prem maane duto kotha bhalobasa baas.
+                <span class="p-text">Prem maane duto kotha bhalobasa baas.
                 Prem maane bhalobese gore tola gaachh.
                 Prem maane lok dekhano bhalobasa school
-                Prem maane abaar prem, aager take chhere</p>
-                <p>Prothom dekha, Prothom kotha,
+                Prem maane abaar prem, aager take chhere</span>
+                <span class="p-text">Prothom dekha, Prothom kotha,
                 Khub anondo, khub anondo.
                 Kintu vai prothom betha jakhon pabi
-                Bujhbi thela</p>
-                <p>Takhon tui nijei dibi sob dosh -
+                Bujhbi thela</span>
+                <span class="p-text">Takhon tui nijei dibi sob dosh -
                 Bhalobasis tui jake.
                 Takhon tui nijer moner betha -
-                Bolbi sobaike dukher kotha</p>
+                Bolbi sobaike dukher kotha</span>
             </pre>
         </article>
     </section>
 
     <style>
         .lyrics-section {
-            max-width: 1000px;
-            margin: 3rem auto;
-            padding: 2rem;
-            background: rgba(0, 0, 0, 0.4);
-            border-radius: 1.5rem;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0d0d0f, #1a0b2e, #0f2027);
             color: #e2e8f0;
             line-height: 1.8;
         }
@@ -204,8 +202,9 @@
         .lyrics-section h1 {
             font-size: 2.5rem;
             text-align: center;
-            color: #facc15;
-            text-shadow: 0 0 12px rgba(250, 204, 21, 0.7);
+            color: #fbbf24;
+            /* warm golden */
+            text-shadow: 0 0 15px rgba(251, 191, 36, 0.8), 0 0 30px rgba(251, 191, 36, 0.5);
             margin-bottom: 1rem;
         }
 
@@ -213,29 +212,67 @@
             text-align: center;
             font-size: 1rem;
             margin-bottom: 2rem;
-            color: #cbd5e1;
+            color: #94a3b8;
+            /* soft slate gray-blue */
         }
 
         .lyrics h2 {
             font-size: 1.6rem;
             margin-top: 2rem;
-            color: #93c5fd;
-            text-shadow: 0 0 8px rgba(147, 197, 253, 0.6);
+            color: #60a5fa;
+            /* sky blue accent */
+            text-shadow: 0 0 10px rgba(96, 165, 250, 0.7), 0 0 20px rgba(96, 165, 250, 0.4);
+        }
+
+        .lyrics-text {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background: rgba(20, 20, 30, 0.65);
+            /* soft dark glass effect */
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+            color: #f1f5f9;
+            /* lighter text */
+            line-height: 1.9;
         }
 
         pre {
             white-space: pre-wrap;
             word-wrap: break-word;
             font-family: "Georgia", serif;
-            font-size: 1.1rem;
-            color: #e2e8f0;
+            font-size: 1.15rem;
+            color: #f8fafc;
+            /* near white */
             background: transparent;
-            /* no white background */
-            border-left: 4px solid #facc15;
+            border-left: 4px solid #fbbf24;
+            /* golden line */
             padding: 1rem;
             margin-bottom: 2rem;
         }
+
+        .p-text {
+            padding-top: 10px;
+            font-family: "Georgia", serif;
+            font-size: 1.15rem;
+            color: #f1f5f9;
+            /* light text */
+            line-height: 1.9;
+            margin: 1rem 0;
+            text-align: justify;
+            text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+            /* subtle depth */
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .p-text:hover {
+            color: #fbbf24;
+            /* golden on hover */
+            transform: translateX(5px);
+            /* cinematic slide effect */
+        }
     </style>
+
 
 
     <div id="lower"></div>
