@@ -144,66 +144,78 @@
     <div id="upper"></div>
 
     <!-- Songs Section -->
-    <section class="resume-section cinematic-songs py-5 text-white" id="songs"
+    <section class="resume-section cinematic-songs py-5 text-white"
         style="background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);">
 
         <div class="resume-section-content container">
 
             <!-- Section Title -->
-            <h2 class="section-title text-center display-4 fw-bold mb-4"
+            <h2 class="fw-bold display-5 text-center mb-4"
                 style="color: #FFD700; text-shadow: 2px 2px 12px rgba(0,0,0,0.7);">
                 🎤 Karaoke & Live Performances
             </h2>
 
             <!-- Section Intro -->
-            <p class="section-intro text-center mb-5 fs-5" style="color: #e0e0e0;">
+            <p class="text-center mb-5 fs-5" style="color: #e0e0e0;">
                 Relive the charm of <strong>live karaoke performances</strong> by Arnab Banerjee, where he blends
                 <em>classical training</em> with <em>modern romantic vibes</em>. His <strong>stage presence</strong>
                 and <strong>audience connection</strong> make every performance memorable.
             </p>
 
-            <!-- Video Cards -->
+            <!-- Video Cards Grid -->
             <div class="row g-4 justify-content-center">
+
+                <!-- Card 1 -->
                 <div class="col-md-6 col-lg-4">
-                    <figure class="card cinematic-card p-2 rounded shadow-lg bg-dark"
-                        style="transition: transform 0.3s, box-shadow 0.3s;">
+                    <figure class="card cinematic-card p-3 rounded shadow-lg bg-dark"
+                        style="border-left: 5px solid #FFD700; transition: transform 0.3s, box-shadow 0.3s;">
                         <div class="ratio ratio-16x9">
                             <iframe src="https://www.youtube.com/embed/hpEFinxjBEg"
                                 title="Arnab Banerjee – Karaoke Performance | Classic Bengali Song" frameborder="0"
                                 allowfullscreen loading="lazy"></iframe>
                         </div>
-                        <figcaption class="card-details mt-2 text-light">
+                        <figcaption class="card-details mt-3 text-light">
                             <strong>Karaoke – Bengali Classic</strong><br>
                             A heartfelt karaoke cover highlighting his classical foundation.
                         </figcaption>
                     </figure>
                 </div>
 
+                <!-- Card 2 -->
                 <div class="col-md-6 col-lg-4">
-                    <figure class="card cinematic-card p-2 rounded shadow-lg bg-dark"
-                        style="transition: transform 0.3s, box-shadow 0.3s;">
+                    <figure class="card cinematic-card p-3 rounded shadow-lg bg-dark"
+                        style="border-left: 5px solid #00e5ff; transition: transform 0.3s, box-shadow 0.3s;">
                         <div class="ratio ratio-16x9">
                             <iframe src="https://www.youtube.com/embed/aocP8cRvUU0"
                                 title="Arnab Banerjee – Karaoke Performance | Romantic Bengali Song" frameborder="0"
                                 allowfullscreen loading="lazy"></iframe>
                         </div>
-                        <figcaption class="card-details mt-2 text-light">
+                        <figcaption class="card-details mt-3 text-light">
                             <strong>Karaoke – Romantic Bengali Song</strong><br>
                             A soulful romantic karaoke performance by Arnab Banerjee.
                         </figcaption>
                     </figure>
                 </div>
-            </div>
 
+            </div>
         </div>
     </section>
 
     <style>
+        /* Hover animation for cards */
         .cinematic-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 25px rgba(255, 215, 0, 0.3);
+            transform: translateY(-6px);
+            box-shadow: 0 15px 25px rgba(255, 215, 0, 0.4);
+        }
+
+        /* Responsive text glow */
+        @media (min-width: 768px) {
+            .cinematic-card figcaption strong {
+                text-shadow: 1px 1px 8px rgba(255, 255, 255, 0.5);
+            }
         }
     </style>
+
 
 
     <!-- Cinematic & SEO-Friendly Styling -->
