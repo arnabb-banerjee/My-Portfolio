@@ -143,100 +143,78 @@
 
     <div id="upper"></div>
 
-    <!-- Songs Section -->
-    <section class="resume-section cinematic-songs" id="songs">
+    <!-- Bengali Movie Songs Section -->
+    <section class="resume-section cinematic-songs py-5 text-white"
+        style="background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);">
+
         <div class="resume-section-content container">
 
-            <!-- Movie Songs -->
-            <h2 class="section-title gradient-text text-center" style="text-align: left;">
+            <!-- Section Title -->
+            <h2 class="fw-bold display-5 text-warning mb-4" style="text-shadow: 2px 2px 12px rgba(0,0,0,0.7);">
                 🎬 Bengali Movie Songs by Arnab Banerjee
             </h2>
-            <p class="section-intro" style="text-align: left;">
-                Discover soulful <strong>Bengali playback songs</strong> performed by <strong>Arnab
-                    Banerjee</strong> in cinema. His heartfelt voice enriches film characters, leaving audiences
-                emotionally connected. These songs showcase the magic of <em>authentic Bengali playback
-                    singing</em>.
+
+            <!-- Section Intro -->
+            <p class="text-light mb-5 fs-5" style="max-width: 900px; margin: 0 auto;">
+                Discover soulful <strong>Bengali playback songs</strong> performed by <strong>Arnab Banerjee</strong>
+                in cinema. His heartfelt voice enriches film characters, leaving audiences emotionally connected.
+                These songs showcase the magic of <em>authentic Bengali playback singing</em>.
             </p>
 
-            <div class="row g-4">
+            <!-- Video Cards Grid -->
+            <div class="row g-4 justify-content-center">
+
+                <!-- Card 1 -->
                 <div class="col-md-6 col-lg-4">
-                    <figure class="card cinematic-card">
+                    <figure class="card cinematic-card p-3 rounded shadow-lg bg-dark"
+                        style="border-left: 5px solid #FFD700; transition: transform 0.3s, box-shadow 0.3s;">
                         <div class="ratio ratio-16x9">
                             <iframe src="https://www.youtube.com/embed/OIDWFdVWbr4"
                                 title="Arnab Banerjee – Bengali Movie Playback Song | Pora Baanshi" frameborder="0"
                                 allowfullscreen loading="lazy"></iframe>
                         </div>
-                        <figcaption class="card-details">
+                        <figcaption class="card-details mt-3 text-light">
                             <strong>Pora Baanshi (Playback Song)</strong><br>
                             A heartfelt Bengali playback performance by Arnab Banerjee.
                         </figcaption>
                     </figure>
                 </div>
 
+                <!-- Card 2 -->
                 <div class="col-md-6 col-lg-4">
-                    <figure class="card cinematic-card">
+                    <figure class="card cinematic-card p-3 rounded shadow-lg bg-dark"
+                        style="border-left: 5px solid #00e5ff; transition: transform 0.3s, box-shadow 0.3s;">
                         <div class="ratio ratio-16x9">
                             <iframe src="https://www.youtube.com/embed/mASrCZaHQq8"
                                 title="Arnab Banerjee – Bengali Movie Playback Song | Ami Rabindranath 2"
                                 frameborder="0" allowfullscreen loading="lazy"></iframe>
                         </div>
-                        <figcaption class="card-details">
+                        <figcaption class="card-details mt-3 text-light">
                             <strong>Ami Rabindranath 2 (Playback Song)</strong><br>
                             A soulful cinematic track showcasing Arnab’s vocal depth.
                         </figcaption>
                     </figure>
                 </div>
-            </div>
 
+            </div>
         </div>
     </section>
 
-    <!-- Cinematic & SEO-Friendly Styling -->
     <style>
-        .cinematic-songs {
-            background: linear-gradient(135deg, #161623, #2c2f4a);
-            color: #ececec;
-            padding: 80px 0;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            color: #ffca28;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
-        }
-
-        .gradient-text {
-            background: linear-gradient(to right, #ff8a65, #f06292);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .section-intro {
-            max-width: 800px;
-            margin: 0 auto 40px;
-            font-size: 1.05rem;
-            line-height: 1.6;
-            color: #cfcfcf;
-        }
-
-        .cinematic-card {
-            background: #222532;
-            border-radius: 20px;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
+        /* Hover animation for cards */
         .cinematic-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(255, 138, 101, 0.5);
+            transform: translateY(-6px);
+            box-shadow: 0 15px 25px rgba(255, 215, 0, 0.4);
         }
 
-        .card-details {
-            color: #ddd;
-            margin-top: 8px;
-            font-size: 0.95rem;
+        /* Responsive text glow */
+        @media (min-width: 768px) {
+            .cinematic-card figcaption strong {
+                text-shadow: 1px 1px 8px rgba(255, 255, 255, 0.5);
+            }
         }
     </style>
+
 
     <div id="lower"></div>
 
