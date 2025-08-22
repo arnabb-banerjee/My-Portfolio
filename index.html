@@ -141,6 +141,14 @@
 
 <body id="page-top">
 
+<script>
+
+    fetch("header.html")
+  .then(res => res.text())
+  .then(html => {
+    document.write(html); // writes directly to document
+  });
+</script>
 
     <!-- Home Section -->
     <section class="resume-section hero d-flex align-items-center justify-content-center text-center text-white"
@@ -209,7 +217,7 @@
         // Load header
         fetch("upper.html")
             .then(res => res.text())
-            .then(data => document.getElementById("page-top").innerHTML = data);
+            .then(data => document.getElementById("upper").innerHTML = data);
 
         // Load footer
         fetch("lower.html")
