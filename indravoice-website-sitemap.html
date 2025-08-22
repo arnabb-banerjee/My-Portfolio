@@ -143,10 +143,10 @@
 
     <div id="upper"></div>
 
-    <section class="sitemap-section py-5">
+    <section class="sitemap-section cinematic-sitemap py-5">
         <div class="container">
-            <h1>Arnab Banerjee Bengali Playback Singer Website - Site Map</h1>
-            <p class="text-center mb-4">
+            <h1 class="sitemap-title">Arnab Banerjee Bengali Playback Singer Website - Site Map</h1>
+            <p class="sitemap-desc">
                 Discover all pages on Arnab Banerjee's official website for Bengali music, playback songs, news, and
                 media coverage.
                 Navigate through each section to explore songs, lyrics, news, and more.
@@ -198,26 +198,46 @@
     </section>
 
     <style>
-        .sitemap-section {
-            background: linear-gradient(135deg, #0d0d0f, #1a0b2e, #0f2027);
+        /* Cinematic background & glow */
+        .cinematic-sitemap {
+            background: radial-gradient(circle at top, #0d0d0f, #1a0b2e, #0f2027);
             color: #e2e8f0;
+            padding: 4rem 2rem;
+            font-family: "Georgia", serif;
         }
 
-        .sitemap-section h1 {
+        /* Title with cinematic golden glow */
+        .sitemap-title {
             color: #fbbf24;
+            font-size: 2.5rem;
             text-align: center;
             margin-bottom: 1rem;
-            font-size: 2.2rem;
-            text-shadow: 0 0 15px rgba(251, 191, 36, 0.8);
+            text-shadow:
+                0 0 10px rgba(251, 191, 36, 0.7),
+                0 0 20px rgba(251, 191, 36, 0.5),
+                0 0 30px rgba(251, 191, 36, 0.3);
+            transition: all 0.3s ease;
         }
 
-        .sitemap-section p {
+        .sitemap-title:hover {
+            text-shadow:
+                0 0 20px rgba(251, 191, 36, 0.9),
+                0 0 40px rgba(251, 191, 36, 0.6),
+                0 0 60px rgba(251, 191, 36, 0.4);
+            transform: scale(1.03);
+        }
+
+        /* Description styling */
+        .sitemap-desc {
             text-align: center;
             color: #94a3b8;
-            margin-bottom: 2rem;
-            font-size: 1rem;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
         }
 
+        /* Sitemap list styling */
         .sitemap-list {
             list-style: none;
             padding-left: 0;
@@ -226,26 +246,61 @@
         }
 
         .sitemap-list li {
-            margin: 0.5rem 0;
+            margin: 0.75rem 0;
+            font-size: 1.05rem;
+            line-height: 1.8;
         }
 
+        /* Nested lists with subtle effect */
         .sitemap-list li ul {
             margin-left: 1.5rem;
             margin-top: 0.5rem;
         }
 
+        /* Link styling with cinematic hover effect */
         .sitemap-list li a {
             color: #60a5fa;
             text-decoration: none;
-            transition: all 0.3s ease;
+            position: relative;
+            transition: all 0.4s ease;
+        }
+
+        .sitemap-list li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background: #fbbf24;
+            transition: width 0.4s ease;
         }
 
         .sitemap-list li a:hover {
             color: #fbbf24;
-            text-shadow: 0 0 8px rgba(251, 191, 36, 0.7);
-            transform: translateX(4px);
+            text-shadow: 0 0 12px rgba(251, 191, 36, 0.8);
+        }
+
+        .sitemap-list li a:hover::after {
+            width: 100%;
+        }
+
+        /* Responsive typography */
+        @media (max-width: 768px) {
+            .sitemap-title {
+                font-size: 2rem;
+            }
+
+            .sitemap-desc {
+                font-size: 1rem;
+            }
+
+            .sitemap-list li {
+                font-size: 1rem;
+            }
         }
     </style>
+
 
 
 
