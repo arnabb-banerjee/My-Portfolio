@@ -116,7 +116,6 @@
     </style>
 </nav>
 
-<!-- Page Content -->
 <div class="container-fluid p-0">
     <!-- Navigation Menu -->
     <header>
@@ -144,7 +143,7 @@
                     </ul>
                 </li>
 
-                <li class="has-submenu">
+                <li class="has-submenu rightmost">
                     <a href="#news">News ▾</a>
                     <ul class="submenu">
                         <li><a href="exclusive-interview-arnab-banerjee-bengali-playback-singer.html">Exclusive Q&A</a></li>
@@ -166,7 +165,7 @@
         .nav-menu {
             list-style: none;
             display: flex;
-            flex-wrap: wrap; /* allows menu to wrap to next line */
+            flex-wrap: wrap;
             justify-content: center;
             gap: 1.5rem;
             margin: 0;
@@ -183,7 +182,7 @@
             font-size: 1rem;
             font-weight: 500;
             transition: color 0.3s;
-            white-space: nowrap; /* keeps link text on one line */
+            white-space: nowrap;
         }
 
         .nav-menu a:hover {
@@ -195,18 +194,26 @@
             display: none;
             position: absolute;
             top: 100%;
-            left: 0;
+            left: 0; /* default submenu to the left edge */
             background: #222;
             padding: 0.5rem 0;
             list-style: none;
             min-width: 200px;
             border-radius: 6px;
             box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+            z-index: 999;
+        }
+
+        /* Submenu for rightmost items */
+        .nav-menu li.rightmost .submenu {
+            left: auto;
+            right: 0; /* flip submenu to the left */
         }
 
         .submenu li a {
             display: block;
             padding: 0.7rem 1rem;
+            color: #fff;
         }
 
         .submenu li a:hover {
@@ -219,7 +226,7 @@
             display: block;
         }
 
-        /* Mobile adjustments (optional) */
+        /* Mobile adjustments */
         @media(max-width: 767px) {
             .nav-menu {
                 justify-content: flex-start;
@@ -228,4 +235,6 @@
             }
         }
     </style>
-</div>
+
+
+
