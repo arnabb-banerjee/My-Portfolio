@@ -117,210 +117,124 @@
 </nav>
 
 <div class="container-fluid p-0">
-  <header>
-    <nav class="navbarh" role="navigation" aria-label="Main">
-      <ul class="nav-menu">
-        <li><a href="bengali-playback-singer-movies-filmography.html">Movies</a></li>
+    <!-- Navigation Menu -->
+    <header>
+        <nav class="navbarh">
+            <ul class="nav-menu">
+                <li><a href="bengali-playback-singer-movies-filmography.html">Movies</a></li>
 
-        <li class="has-submenu">
-          <a href="#singing" aria-haspopup="true" aria-expanded="false">Singing ▾</a>
-          <ul class="submenu" role="menu">
-            <li><a href="bengali-playback-singer-awards-recognition.html">Awards & Recognition</a></li>
-            <li><a href="bengali-playback-singer-playback-songs.html">Playback Songs</a></li>
-            <li><a href="arnab-banerjee-original-bengali-songs.html">Original Songs</a></li>
-            <li><a href="arnab-banerjee-karaoke-songs.html">Karaoke Songs</a></li>
-            <li><a href="arnab-banerjee-bengali-music-genres.html">Genres</a></li>
-          </ul>
-        </li>
+                <li class="has-submenu">
+                    <a href="#singing">Singing ▾</a>
+                    <ul class="submenu">
+                        <li><a href="bengali-playback-singer-awards-recognition.html">Awards & Recognition</a></li>
+                        <li><a href="bengali-playback-singer-playback-songs.html">Playback Songs</a></li>
+                        <li><a href="arnab-banerjee-original-bengali-songs.html">Original Songs</a></li>
+                        <li><a href="arnab-banerjee-karaoke-songs.html">Karaoke Songs</a></li>
+                        <li><a href="arnab-banerjee-bengali-music-genres.html">Genres</a></li>
+                    </ul>
+                </li>
 
-        <li class="has-submenu">
-          <a href="#lyrics" aria-haspopup="true" aria-expanded="false">Lyrics ▾</a>
-          <ul class="submenu" role="menu">
-            <li><a href="lyrics-prem-mane-duto-kotha-bengali-song.html">Prem mane duto kotha</a></li>
-            <li><a href="lyrics-teri-wo-dono-ankho-me-song.html">Teri wo dono ankho me</a></li>
-            <li><a href="lyrics-eka-chokh-buje-vabi-bengali-song.html">Eka chokh buje vabi</a></li>
-          </ul>
-        </li>
+                <li class="has-submenu">
+                    <a href="#lyrics">Lyrics ▾</a>
+                    <ul class="submenu">
+                        <li><a href="lyrics-prem-mane-duto-kotha-bengali-song.html">Prem mane duto kotha</a></li>
+                        <li><a href="lyrics-teri-wo-dono-ankho-me-song.html">Teri wo dono ankho me</a></li>
+                        <li><a href="lyrics-eka-chokh-buje-vabi-bengali-song.html">Eka chokh buje vabi</a></li>
+                    </ul>
+                </li>
 
-        <li class="has-submenu">
-          <a href="#news" aria-haspopup="true" aria-expanded="false">News ▾</a>
-          <ul class="submenu" role="menu">
-            <li><a href="exclusive-interview-arnab-banerjee-bengali-playback-singer.html">Exclusive Q&A with Arnab Banerjee: The Rising Star of Bengali Music</a></li>
-            <li><a href="arnab-banerjee-rising-star-bengali-cinema.html">Arnab Banerjee: The Rising Star Lighting Up Bengali Cinema</a></li>
-            <li><a href="bengali-film-songs-lyrics-melody-emotion-2022-2024.html">Bengali Film Songs – A Journey Through Lyrics, Melody & Emotion (2022–2024)</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-  </header>
+                <li class="has-submenu rightmost">
+                    <a href="#news">News ▾</a>
+                    <ul class="submenu">
+                        <li><a href="exclusive-interview-arnab-banerjee-bengali-playback-singer.html">Exclusive Q&A</a></li>
+                        <li><a href="arnab-banerjee-rising-star-bengali-cinema.html">Rising Star Bengali Cinema</a></li>
+                        <li><a href="bengali-film-songs-lyrics-melody-emotion-2022-2024.html">Film Songs Journey</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-  <style>
-    .navbarh {
-      background: #111;
-      padding: 1rem 2rem;
-    }
-    .nav-menu {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;                 /* allow wrapping to next row */
-      justify-content: center;
-      gap: 1.5rem;
-      margin: 0;
-      padding: 0;
-    }
-    .nav-menu > li {
-      position: relative;
-    }
-    .nav-menu a {
-      text-decoration: none;
-      color: #fff;
-      font-size: 1rem;
-      font-weight: 500;
-      transition: color .2s ease;
-      white-space: nowrap;             /* keep top items on one line */
-    }
-    .nav-menu a:hover { color: #f39c12; }
-
-    /* Submenu base (hidden by default) */
-    .submenu {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: auto;
-      background: #222;
-      list-style: none;
-      margin: .25rem 0 0;
-      padding: .5rem 0;
-      border-radius: 8px;
-      box-shadow: 0 8px 24px rgba(0,0,0,.35);
-      z-index: 1000;
-
-      /* fluid sizing: grow to content, but never exceed viewport */
-      width: max-content;
-      min-width: 220px;
-      max-width: calc(100vw - 16px);
-
-      /* wrap long text only if needed */
-      white-space: normal;
-      overflow-wrap: anywhere;
-      word-break: break-word;
-
-      /* animated visibility controlled via JS */
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-      transform: translateY(8px);
-      transition: opacity .15s ease, transform .15s ease, visibility 0s linear .15s;
-    }
-    .submenu li a {
-      display: block;
-      padding: .7rem 1rem;
-      color: #fff;
-      line-height: 1.2;
-    }
-    .submenu li a:hover {
-      background: #f39c12;
-      color: #111;
-    }
-
-    /* show when parent has .open (set by JS on hover/focus) */
-    .has-submenu.open > .submenu {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: auto;
-      transform: translateY(0);
-      transition: opacity .15s ease, transform .15s ease, visibility 0s;
-    }
-
-    /* flipped alignment */
-    .has-submenu.open > .submenu.align-right {
-      left: auto;
-      right: 0;
-    }
-
-    /* small screens: keep layout tidy */
-    @media (max-width: 768px) {
-      .nav-menu { justify-content: flex-start; gap: 1rem; }
-    }
-  </style>
-
-  <script>
-    (function () {
-      const MARGIN = 8; // px from viewport edges
-
-      function positionSubmenu(item) {
-        const submenu = item.querySelector('.submenu');
-        if (!submenu) return;
-
-        // reset any previous adjustments
-        submenu.classList.remove('align-right');
-        submenu.style.left = '';
-        submenu.style.right = '';
-        submenu.style.maxWidth = (window.innerWidth - MARGIN * 2) + 'px';
-
-        // measure current position
-        const rect = submenu.getBoundingClientRect();
-
-        // If overflowing the right edge → flip to right
-        if (rect.right > window.innerWidth - MARGIN) {
-          submenu.classList.add('align-right');
+    <!-- CSS -->
+    <style>
+        .navbarh {
+            background: #111;
+            padding: 1rem 2rem;
         }
 
-        // re-measure after potential flip
-        const rect2 = submenu.getBoundingClientRect();
-
-        // If still overflowing left after flip/nudge → pin with small margin
-        if (rect2.left < MARGIN) {
-          submenu.classList.remove('align-right');
-          submenu.style.left = MARGIN + 'px';
-          submenu.style.right = 'auto';
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 0;
+            padding: 0;
         }
-      }
 
-      function openItem(e) {
-        const item = e.currentTarget;
-        const link = item.querySelector('a');
-        item.classList.add('open');
-        link && link.setAttribute('aria-expanded', 'true');
-
-        // Wait for the submenu to render visible, then measure
-        requestAnimationFrame(() => positionSubmenu(item));
-      }
-
-      function closeItem(e) {
-        const item = e.currentTarget;
-        const link = item.querySelector('a');
-        item.classList.remove('open');
-        link && link.setAttribute('aria-expanded', 'false');
-
-        const submenu = item.querySelector('.submenu');
-        if (submenu) {
-          submenu.classList.remove('align-right');
-          submenu.style.left = '';
-          submenu.style.right = '';
+        .nav-menu li {
+            position: relative;
         }
-      }
 
-      document.querySelectorAll('.has-submenu').forEach(item => {
-        // Hover support
-        item.addEventListener('mouseenter', openItem);
-        item.addEventListener('mouseleave', closeItem);
+        .nav-menu a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.3s;
+            white-space: nowrap;
+        }
 
-        // Keyboard accessibility
-        item.addEventListener('focusin', openItem);
-        item.addEventListener('focusout', (e) => {
-          if (!item.contains(e.relatedTarget)) closeItem(e);
-        });
-      });
+        .nav-menu a:hover {
+            color: #f39c12;
+        }
 
-      // Recalculate for open menus on resize
-      window.addEventListener('resize', () => {
-        document.querySelectorAll('.has-submenu.open').forEach(positionSubmenu);
-      });
-    })();
-  </script>
-</div>
+        /* Submenu */
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0; /* default submenu to the left edge */
+            background: #222;
+            padding: 0.5rem 0;
+            list-style: none;
+            min-width: 200px;
+            border-radius: 6px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+            z-index: 999;
+        }
 
+        /* Submenu for rightmost items */
+        .nav-menu li.rightmost .submenu {
+            left: auto;
+            right: 0; /* flip submenu to the left */
+        }
+
+        .submenu li a {
+            display: block;
+            padding: 0.7rem 1rem;
+            color: #fff;
+        }
+
+        .submenu li a:hover {
+            background: #f39c12;
+            color: #111;
+        }
+
+        /* Show submenu on hover */
+        .has-submenu:hover .submenu {
+            display: block;
+        }
+
+        /* Mobile adjustments */
+        @media(max-width: 767px) {
+            .nav-menu {
+                justify-content: flex-start;
+                gap: 1rem;
+                padding: 0.5rem 0;
+            }
+        }
+    </style>
 
 
 
