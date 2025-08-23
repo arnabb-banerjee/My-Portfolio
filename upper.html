@@ -120,12 +120,12 @@
     <!-- Navigation Menu -->
     <header>
         <nav class="navbarh">
-            <ul class="nav-menu">
+            <ul class="navh-menu">
                 <li><a href="bengali-playback-singer-movies-filmography.html">Movies</a></li>
 
-                <li class="has-submenu">
+                <li class="has-submenuh">
                     <a href="#singing">Singing ▾</a>
-                    <ul class="submenu">
+                    <ul class="submenuh">
                         <li><a href="bengali-playback-singer-awards-recognition.html">Awards & Recognition</a></li>
                         <li><a href="bengali-playback-singer-playback-songs.html">Playback Songs</a></li>
                         <li><a href="arnab-banerjee-original-bengali-songs.html">Original Songs</a></li>
@@ -134,18 +134,18 @@
                     </ul>
                 </li>
 
-                <li class="has-submenu">
+                <li class="has-submenuh">
                     <a href="#lyrics">Lyrics ▾</a>
-                    <ul class="submenu">
+                    <ul class="submenuh">
                         <li><a href="lyrics-prem-mane-duto-kotha-bengali-song.html">Prem mane duto kotha</a></li>
                         <li><a href="lyrics-teri-wo-dono-ankho-me-song.html">Teri wo dono ankho me</a></li>
                         <li><a href="lyrics-eka-chokh-buje-vabi-bengali-song.html">Eka chokh buje vabi</a></li>
                     </ul>
                 </li>
 
-                <li class="has-submenu rightmost">
+                <li class="has-submenuh rightmost">
                     <a href="#news">News ▾</a>
-                    <ul class="submenu">
+                    <ul class="submenuh">
                         <li><a href="exclusive-interview-arnab-banerjee-bengali-playback-singer.html">Exclusive Q&A</a></li>
                         <li><a href="arnab-banerjee-rising-star-bengali-cinema.html">Rising Star Bengali Cinema</a></li>
                         <li><a href="bengali-film-songs-lyrics-melody-emotion-2022-2024.html">Film Songs Journey</a></li>
@@ -162,7 +162,7 @@
             padding: 1rem 2rem;
         }
 
-        .nav-menu {
+        .navh-menu {
             list-style: none;
             display: flex;
             flex-wrap: wrap;
@@ -172,11 +172,11 @@
             padding: 0;
         }
 
-        .nav-menu li {
+        .navh-menu li {
             position: relative;
         }
 
-        .nav-menu a {
+        .navh-menu a {
             text-decoration: none;
             color: #fff;
             font-size: 1rem;
@@ -185,12 +185,12 @@
             white-space: nowrap;
         }
 
-        .nav-menu a:hover {
+        .navh-menu a:hover {
             color: #f39c12;
         }
 
         /* Submenu */
-        .submenu {
+        .submenuh {
             display: none;
             position: absolute;
             top: 100%;
@@ -205,30 +205,30 @@
         }
 
         /* Submenu for rightmost items */
-        .nav-menu li.rightmost .submenu {
+        .navh-menu li.rightmost .submenuh {
             left: auto;
             right: 0; /* flip submenu to the left */
         }
 
-        .submenu li a {
+        .submenuh li a {
             display: block;
             padding: 0.7rem 1rem;
             color: #fff;
         }
 
-        .submenu li a:hover {
+        .submenuh li a:hover {
             background: #f39c12;
             color: #111;
         }
 
         /* Show submenu on hover */
-        .has-submenu:hover .submenu {
+        .has-submenuh:hover .submenuh {
             display: block;
         }
 
         /* Mobile adjustments */
         @media(max-width: 767px) {
-            .nav-menu {
+            .navh-menu {
                 justify-content: flex-start;
                 gap: 1rem;
                 padding: 0.5rem 0;
