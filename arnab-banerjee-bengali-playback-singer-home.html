@@ -161,6 +161,12 @@
     <div id="lower"></div>
 
     <script>
+
+        // Load header
+        fetch("upper.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("upper").innerHTML = data);
+
         // Load footer
         fetch("lower.html")
             .then(res => res.text())
